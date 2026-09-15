@@ -41,7 +41,7 @@
   </script>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans selection:bg-[#F7B500]/30 selection:text-[#041E39]">
 
@@ -52,10 +52,15 @@
         <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-[#F7B500] animate-pulse"></span>
         <span>🎉 आता AI शिका तुमच्या हक्काच्या मराठी भाषेत — १००% मोफत आणि सोप्या उदाहरणांसह!</span>
       </div>
-      <a href="/learn.html" class="inline-flex items-center gap-1 text-[#F7B500] hover:underline font-medium marathi-text">
-        <span>शिकायला सुरुवात करा</span>
-        <span aria-hidden="true">→</span>
-      </a>
+      <div class="flex items-center gap-3">
+        <a href="ai-tools-marathi.zip" download="ai-tools-marathi.zip" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#F7B500] hover:bg-[#FBAA33] text-[#041E39] font-bold text-xs shadow-sm transition-colors marathi-text" title="ही वेबसाईट तुमच्या स्वतःच्या cPanel File Manager सबफोल्डरमध्ये चालवण्यासाठी">
+          <span>📥 ZIP डाउनलोड (cPanel)</span>
+        </a>
+        <a href="learn.html" class="inline-flex items-center gap-1 text-[#F7B500] hover:underline font-medium marathi-text">
+          <span>शिकायला सुरुवात करा</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
   </aside>
 
@@ -63,7 +68,7 @@
   <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo -->
-      <a href="/index.html" class="flex items-center gap-3 group" id="nav-brand-logo">
+      <a href="index.html" class="flex items-center gap-3 group" id="nav-brand-logo">
         <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700 group-hover:scale-105 transition-transform">
           AI
         </div>
@@ -75,19 +80,22 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text" aria-label="मुख्य नेव्हिगेशन">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
-        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
+        <a href="index.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="tools.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">AI Tools</a>
+        <a href="categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
 
       <!-- Action Button / Mobile Menu Toggle -->
-      <div class="flex items-center gap-3">
-        <a href="/tools.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-sm font-semibold shadow-sm transition-all marathi-text">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="ai-tools-marathi.zip" download="ai-tools-marathi.zip" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 bg-amber-50 border border-amber-300 text-[#041E39] hover:bg-amber-100 rounded-xl text-xs font-bold transition-all marathi-text shadow-sm" title="cPanel File Manager मध्ये सबफोल्डरसाठी तयार ZIP">
+          <span>📥 ZIP डाऊनलोड</span>
+        </a>
+        <a href="tools.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-sm font-semibold shadow-sm transition-all marathi-text">
           <span>🚀 सर्व Tools</span>
         </a>
 
@@ -106,16 +114,19 @@
         <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">नेव्हिगेशन मेनू</span>
         <button id="mobile-menu-close" type="button" class="text-xs text-slate-500 font-semibold p-1 hover:text-slate-800">बंद करा ✕</button>
       </div>
-      <a href="/index.html" class="block px-3 py-2.5 rounded-xl bg-slate-100 text-[#041E39] font-bold text-base">मुख्यपृष्ठ</a>
-      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">AI Tools (सर्व टूल्स)</a>
-      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories (विभाग)</a>
-      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts (मराठी प्रॉम्प्ट्स)</a>
-      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया (Beginner Guide)</a>
-      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना (Tool Comparison & Quiz)</a>
-      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी? (Audience Guide)</a>
-      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About (आमच्याबद्दल)</a>
-      <div class="pt-2">
-        <a href="/tools.html" class="block text-center w-full py-3 bg-[#041E39] text-white rounded-xl font-bold text-sm">
+      <a href="index.html" class="block px-3 py-2.5 rounded-xl bg-slate-100 text-[#041E39] font-bold text-base">मुख्यपृष्ठ</a>
+      <a href="tools.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">AI Tools (सर्व टूल्स)</a>
+      <a href="categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories (विभाग)</a>
+      <a href="prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts (मराठी प्रॉम्प्ट्स)</a>
+      <a href="learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया (Beginner Guide)</a>
+      <a href="compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना (Tool Comparison & Quiz)</a>
+      <a href="audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी? (Audience Guide)</a>
+      <a href="about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About (आमच्याबद्दल)</a>
+      <div class="pt-2 space-y-2">
+        <a href="ai-tools-marathi.zip" download="ai-tools-marathi.zip" class="block text-center w-full py-2.5 bg-[#F7B500] hover:bg-amber-400 text-[#041E39] rounded-xl font-bold text-sm shadow-sm">
+          📥 ZIP डाउनलोड करा (cPanel File Manager)
+        </a>
+        <a href="tools.html" class="block text-center w-full py-3 bg-[#041E39] text-white rounded-xl font-bold text-sm">
           🚀 सर्व AI Tools एक्सप्लोर करा
         </a>
       </div>
@@ -166,11 +177,11 @@
 
             <!-- Hero Action Buttons -->
             <div class="flex flex-wrap items-center gap-4 pt-2">
-              <a href="/tools.html" class="px-6 py-3.5 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-bold text-base shadow-md hover:shadow-lg transition-all flex items-center gap-2 marathi-text">
+              <a href="tools.html" class="px-6 py-3.5 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-bold text-base shadow-md hover:shadow-lg transition-all flex items-center gap-2 marathi-text">
                 <span>🚀</span>
                 <span>AI Tools Explore करा</span>
               </a>
-              <a href="/learn.html" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-[#041E39] font-bold text-base shadow-sm transition-all flex items-center gap-2 marathi-text">
+              <a href="learn.html" class="px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-[#041E39] font-bold text-base shadow-sm transition-all flex items-center gap-2 marathi-text">
                 <span>📚</span>
                 <span>Beginner Guide</span>
               </a>
@@ -208,7 +219,7 @@
 
               <!-- Interactive quick pathways -->
               <div class="space-y-2.5 mt-5">
-                <a href="/tools/chatgpt.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/chatgpt.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">✍️</span>
                     <div>
@@ -219,7 +230,7 @@
                   <span class="text-xs font-semibold text-slate-400 group-hover:text-[#041E39] transition-transform group-hover:translate-x-1">शिका →</span>
                 </a>
 
-                <a href="/tools/notebooklm.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/notebooklm.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">📄</span>
                     <div>
@@ -230,7 +241,7 @@
                   <span class="text-xs font-semibold text-slate-400 group-hover:text-[#041E39] transition-transform group-hover:translate-x-1">शिका →</span>
                 </a>
 
-                <a href="/tools/canva.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/canva.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">🎨</span>
                     <div>
@@ -241,7 +252,7 @@
                   <span class="text-xs font-semibold text-slate-400 group-hover:text-[#041E39] transition-transform group-hover:translate-x-1">शिका →</span>
                 </a>
 
-                <a href="/tools/capcut.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/capcut.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">🎥</span>
                     <div>
@@ -252,7 +263,7 @@
                   <span class="text-xs font-semibold text-slate-400 group-hover:text-[#041E39] transition-transform group-hover:translate-x-1">शिका →</span>
                 </a>
 
-                <a href="/tools/gamma.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/gamma.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">📊</span>
                     <div>
@@ -263,7 +274,7 @@
                   <span class="text-xs font-semibold text-slate-400 group-hover:text-[#041E39] transition-transform group-hover:translate-x-1">शिका →</span>
                 </a>
 
-                <a href="/tools/n8n.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
+                <a href="tools/n8n.html" class="flex items-center justify-between p-3.5 rounded-xl border border-slate-100 hover:border-[#F7B500] hover:bg-amber-50/50 transition-all group">
                   <div class="flex items-center gap-3">
                     <span class="text-xl">⚙️</span>
                     <div>
@@ -335,7 +346,7 @@
         </div>
 
         <div class="mt-12 text-center">
-          <a href="/learn.html" class="inline-flex items-center gap-2 text-[#041E39] font-bold text-sm hover:text-[#F7B500] transition-colors marathi-text">
+          <a href="learn.html" class="inline-flex items-center gap-2 text-[#041E39] font-bold text-sm hover:text-[#F7B500] transition-colors marathi-text">
             <span>सविस्तर Beginner Guide वाचा</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -354,7 +365,7 @@
             <h2 class="text-3xl sm:text-4xl font-extrabold text-[#041E39] mt-3 marathi-text">सर्वात जास्त वापरली जाणारी AI Tools</h2>
             <p class="text-base text-slate-600 mt-2 marathi-text">या टूल्सपासून तुम्ही तुमची AI शिकण्याची सुरुवात करू शकता.</p>
           </div>
-          <a href="/tools.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-300 hover:border-slate-400 text-[#041E39] rounded-xl text-sm font-bold shadow-sm transition-all marathi-text whitespace-nowrap">
+          <a href="tools.html" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-slate-300 hover:border-slate-400 text-[#041E39] rounded-xl text-sm font-bold shadow-sm transition-all marathi-text whitespace-nowrap">
             <span>सर्व AI Tools पहा</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -383,7 +394,7 @@
                 <span>✍️ Writing</span>
                 <span>👥 सर्वांसाठी</span>
               </div>
-              <a href="/tools/chatgpt.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/chatgpt.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -409,7 +420,7 @@
                 <span>🌐 Google Docs</span>
                 <span>👥 कर्मचारी, विद्यार्थी</span>
               </div>
-              <a href="/tools/gemini.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/gemini.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -435,7 +446,7 @@
                 <span>📚 Analysis</span>
                 <span>👥 लेखक, अभ्यासक</span>
               </div>
-              <a href="/tools/claude.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/claude.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -461,7 +472,7 @@
                 <span>🔗 Citations</span>
                 <span>👥 पत्रकार, संशोधक</span>
               </div>
-              <a href="/tools/perplexity.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/perplexity.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -487,7 +498,7 @@
                 <span>📄 PDF Study</span>
                 <span>👥 विद्यार्थी, शिक्षक</span>
               </div>
-              <a href="/tools/notebooklm.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/notebooklm.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -513,7 +524,7 @@
                 <span>🖼️ Graphic Design</span>
                 <span>👥 दुकानदार, क्रिएटर्स</span>
               </div>
-              <a href="/tools/canva.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/canva.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -539,7 +550,7 @@
                 <span>🎬 Reels / Shorts</span>
                 <span>👥 यूट्यूबर्स, तरुण</span>
               </div>
-              <a href="/tools/capcut.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/capcut.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -565,7 +576,7 @@
                 <span>🤖 Automation</span>
                 <span>👥 स्टार्टअप, डेव्हलपर्स</span>
               </div>
-              <a href="/tools/n8n.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
+              <a href="tools/n8n.html" class="block w-full text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors">
                 हे Tool शिका →
               </a>
             </div>
@@ -574,7 +585,7 @@
         </div>
 
         <div class="mt-12 text-center">
-          <a href="/tools.html" class="inline-flex items-center gap-3 px-8 py-4 bg-[#041E39] hover:bg-[#082e54] text-white rounded-2xl font-bold text-base shadow-md transition-all marathi-text">
+          <a href="tools.html" class="inline-flex items-center gap-3 px-8 py-4 bg-[#041E39] hover:bg-[#082e54] text-white rounded-2xl font-bold text-base shadow-md transition-all marathi-text">
             <span>सर्व 19+ AI Tools पहा</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -616,7 +627,7 @@
                 </li>
               </ul>
             </div>
-            <a href="/audience.html#teachers" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
+            <a href="audience.html#teachers" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
               <span>शिक्षकांसाठी AI मार्गदर्शक</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -642,7 +653,7 @@
                 </li>
               </ul>
             </div>
-            <a href="/audience.html#office" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
+            <a href="audience.html#office" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
               <span>ऑफिससाठी AI मार्गदर्शक</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -668,7 +679,7 @@
                 </li>
               </ul>
             </div>
-            <a href="/audience.html#business" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
+            <a href="audience.html#business" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
               <span>व्यावसायिकांसाठी मार्गदर्शक</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -694,7 +705,7 @@
                 </li>
               </ul>
             </div>
-            <a href="/audience.html#home" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
+            <a href="audience.html#home" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
               <span>गृहिणींसाठी AI मार्गदर्शक</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -720,7 +731,7 @@
                 </li>
               </ul>
             </div>
-            <a href="/audience.html#seniors" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
+            <a href="audience.html#seniors" class="text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text flex items-center gap-1">
               <span>ज्येष्ठांसाठी AI मार्गदर्शक</span>
               <span aria-hidden="true">→</span>
             </a>
@@ -753,7 +764,7 @@
             </div>
 
             <div class="pt-2">
-              <a href="/prompts.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-[#F7B500] hover:bg-[#e0a400] text-[#041E39] rounded-xl font-bold text-sm transition-colors marathi-text">
+              <a href="prompts.html" class="inline-flex items-center gap-2 px-6 py-3.5 bg-[#F7B500] hover:bg-[#e0a400] text-[#041E39] rounded-xl font-bold text-sm transition-colors marathi-text">
                 <span>📋 तयार Prompts ची लायब्ररी उघडा</span>
                 <span aria-hidden="true">→</span>
               </a>
@@ -799,18 +810,18 @@
         </p>
 
         <div class="mt-8 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto marathi-text">
-          <a href="/compare.html?focus=office" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🏢 ऑफिस</a>
-          <a href="/compare.html?focus=study" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">📚 शिक्षण</a>
-          <a href="/compare.html?focus=business" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🏪 Business</a>
-          <a href="/compare.html?focus=design" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎨 Design</a>
-          <a href="/compare.html?focus=video" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎥 Video</a>
-          <a href="/compare.html?focus=research" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🔎 Research</a>
-          <a href="/compare.html?focus=voice" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎙 Voice</a>
-          <a href="/compare.html?focus=automation" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">⚙️ Automation</a>
+          <a href="compare.html?focus=office" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🏢 ऑफिस</a>
+          <a href="compare.html?focus=study" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">📚 शिक्षण</a>
+          <a href="compare.html?focus=business" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🏪 Business</a>
+          <a href="compare.html?focus=design" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎨 Design</a>
+          <a href="compare.html?focus=video" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎥 Video</a>
+          <a href="compare.html?focus=research" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🔎 Research</a>
+          <a href="compare.html?focus=voice" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">🎙 Voice</a>
+          <a href="compare.html?focus=automation" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-[#041E39] hover:text-white text-slate-800 text-sm font-semibold transition-all">⚙️ Automation</a>
         </div>
 
         <div class="mt-8">
-          <a href="/compare.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#041E39] text-white rounded-xl text-sm font-bold hover:bg-[#082e54] transition-colors marathi-text">
+          <a href="compare.html" class="inline-flex items-center gap-2 px-6 py-3 bg-[#041E39] text-white rounded-xl text-sm font-bold hover:bg-[#082e54] transition-colors marathi-text">
             <span>सविस्तर तुलना तक्ता व Quiz पहा</span>
             <span aria-hidden="true">→</span>
           </a>
@@ -845,10 +856,11 @@
         <div class="space-y-3 marathi-text">
           <div class="text-sm font-bold text-[#F7B500] uppercase tracking-wider">महत्त्वाचे दुवे</div>
           <ul class="space-y-2 text-sm text-slate-300">
-            <li><a href="/index.html" class="hover:text-white transition-colors">मुख्यपृष्ठ</a></li>
-            <li><a href="/tools.html" class="hover:text-white transition-colors">सर्व AI Tools</a></li>
-            <li><a href="/categories.html" class="hover:text-white transition-colors">Categories (विभाग)</a></li>
-            <li><a href="/prompts.html" class="hover:text-white transition-colors">Prompt Library</a></li>
+            <li><a href="index.html" class="hover:text-white transition-colors">मुख्यपृष्ठ</a></li>
+            <li><a href="tools.html" class="hover:text-white transition-colors">सर्व AI Tools</a></li>
+            <li><a href="categories.html" class="hover:text-white transition-colors">Categories (विभाग)</a></li>
+            <li><a href="prompts.html" class="hover:text-white transition-colors">Prompt Library</a></li>
+            <li><a href="ai-tools-marathi.zip" download="ai-tools-marathi.zip" class="text-[#F7B500] font-bold hover:underline flex items-center gap-1.5"><span>📥</span> <span>cPanel ZIP डाउनलोड</span></a></li>
           </ul>
         </div>
 
@@ -856,10 +868,10 @@
         <div class="space-y-3 marathi-text">
           <div class="text-sm font-bold text-[#F7B500] uppercase tracking-wider">शिकण्यासाठी</div>
           <ul class="space-y-2 text-sm text-slate-300">
-            <li><a href="/learn.html" class="hover:text-white transition-colors">Beginner Guide</a></li>
-            <li><a href="/compare.html" class="hover:text-white transition-colors">Tools तुलना तक्ता</a></li>
-            <li><a href="/audience.html" class="hover:text-white transition-colors">कोणासाठी कोणते Tool?</a></li>
-            <li><a href="/about.html" class="hover:text-white transition-colors">आमच्याबद्दल (About)</a></li>
+            <li><a href="learn.html" class="hover:text-white transition-colors">Beginner Guide</a></li>
+            <li><a href="compare.html" class="hover:text-white transition-colors">Tools तुलना तक्ता</a></li>
+            <li><a href="audience.html" class="hover:text-white transition-colors">कोणासाठी कोणते Tool?</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">आमच्याबद्दल (About)</a></li>
           </ul>
         </div>
 
@@ -867,10 +879,10 @@
         <div class="space-y-3 marathi-text">
           <div class="text-sm font-bold text-[#F7B500] uppercase tracking-wider">लोकप्रिय टूल्स</div>
           <ul class="space-y-2 text-sm text-slate-300">
-            <li><a href="/tools/chatgpt.html" class="hover:text-white transition-colors">ChatGPT शिका</a></li>
-            <li><a href="/tools/gemini.html" class="hover:text-white transition-colors">Google Gemini शिका</a></li>
-            <li><a href="/tools/notebooklm.html" class="hover:text-white transition-colors">NotebookLM (PDF)</a></li>
-            <li><a href="/tools/canva.html" class="hover:text-white transition-colors">Canva AI डिझाइन</a></li>
+            <li><a href="tools/chatgpt.html" class="hover:text-white transition-colors">ChatGPT शिका</a></li>
+            <li><a href="tools/gemini.html" class="hover:text-white transition-colors">Google Gemini शिका</a></li>
+            <li><a href="tools/notebooklm.html" class="hover:text-white transition-colors">NotebookLM (PDF)</a></li>
+            <li><a href="tools/canva.html" class="hover:text-white transition-colors">Canva AI डिझाइन</a></li>
           </ul>
         </div>
 
@@ -887,7 +899,7 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/main.js"></script>
-  <script src="/js/tools.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/tools.js"></script>
 </body>
 </html>

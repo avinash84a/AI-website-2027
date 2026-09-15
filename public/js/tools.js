@@ -383,7 +383,7 @@ function createToolCardHtml(tool) {
         </div>
 
         <div class="flex items-center gap-2">
-          <a href="/tools/${tool.slug}" class="flex-1 text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors duration-150 flex items-center justify-center gap-2">
+          <a href="${window.location.pathname.includes('/tools/') ? '' : 'tools/'}${tool.slug}" class="flex-1 text-center py-2.5 px-4 rounded-xl bg-[#041E39] hover:bg-[#082e54] text-white font-medium text-sm marathi-text transition-colors duration-150 flex items-center justify-center gap-2">
             <span>हे Tool शिका</span>
             <span aria-hidden="true">→</span>
           </a>

@@ -102,7 +102,8 @@ function initGlobalQuickSearch() {
       if (e.key === 'Enter') {
         const val = encodeURIComponent(this.value.trim());
         if (val) {
-          window.location.href = `/tools.html?q=${val}`;
+          const prefix = window.location.pathname.includes('/tools/') ? '../' : '';
+          window.location.href = `${prefix}tools.html?q=${val}`;
         }
       }
     });
