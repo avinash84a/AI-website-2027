@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Tools Categories (विभाग) | AI Tools Marathi</title>
+  <meta name="description" content="AI टूल्सचे कामाच्या स्वरूपानुसार सोपे वर्गीकरण. Writing, Research, Video, Design, Music, Voice आणि Automation टूल्स मराठीत शिका.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
+
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/tools.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
+          <span>🚀 सर्व टूल्स</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">नेव्हिगेशन मेनू</span>
+        <button id="mobile-menu-close" type="button" class="text-xs text-slate-500 font-semibold p-1 hover:text-slate-800">बंद करा ✕</button>
+      </div>
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl bg-slate-100 text-[#041E39] font-bold text-base">Categories (विभाग)</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
+    </div>
+  </header>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="max-w-3xl mb-12">
+        <nav class="text-xs text-slate-500 font-medium mb-3 marathi-text" aria-label="Breadcrumb">
+          <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+          <span class="mx-2">→</span>
+          <span class="text-[#041E39] font-bold">Categories</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#041E39] marathi-text">AI Tools Categories (विभाग)</h1>
+        <p class="text-base text-slate-600 mt-2 marathi-text">
+          तुमच्या कामाच्या प्रकारानुसार AI साधनांचे सोपे वर्गीकरण. तुम्हाला जे काम करायचे आहे तो विभाग निवडा आणि त्वरित योग्य टूल शिका.
+        </p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- 1. AI Assistant -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl border border-emerald-100">
+                🤖
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">AI Assistant</h2>
+                <p class="text-xs text-slate-500 marathi-text">प्रश्न, उत्तरे, विचारविमर्श आणि लेखन</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              कोणतीही शंका विचारण्यासाठी, कच्च्या माहितीवरून परिच्छेद किंवा पत्र लिहिण्यासाठी आणि मेंदूला नवनवीन कल्पना देण्यासाठी वापरले जाणारे सर्वसमावेशक डिजिटल सहाय्यक.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/chatgpt.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">ChatGPT ↗</a>
+              <a href="/tools/gemini.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Gemini ↗</a>
+              <a href="/tools/claude.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Claude ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Research -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center text-2xl border border-teal-100">
+                🔎
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Research & Search</h2>
+                <p class="text-xs text-slate-500 marathi-text">थेट वेब शोध, संदर्भ आणि अचूक तथ्ये</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              पारंपारिक गुगल सर्चच्या 10 निळ्या लिंक्स उघडण्याऐवजी, इंटरनेटवरील ताज्या माहितीचा अभ्यास करून पुराव्यासह अचूक उत्तर देणारी साधने.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/perplexity.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Perplexity ↗</a>
+              <a href="/tools/gemini.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Gemini (Live Search) ↗</a>
+              <a href="/tools/google-lens.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Google Lens ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Study & PDF -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl border border-purple-100">
+                📚
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Study & PDF</h2>
+                <p class="text-xs text-slate-500 marathi-text">पुस्तके, नोट्स आणि अभ्यास सामग्री</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              मोठमोठे 200 पानांचे PDF दस्तऐवज, सरकारी जीआर किंवा संदर्भ पुस्तके अपलोड करून त्यातून प्रश्न विचारणे आणि ऑडिओ चर्चा ऐकणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/notebooklm.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">NotebookLM ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Office -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-2xl border border-sky-100">
+                💼
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Office & Work</h2>
+                <p class="text-xs text-slate-500 marathi-text">Word, Excel, PPT आणि कॉर्पोरेट कामे</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              कार्यालयीन कामगारांसाठी Excel सूत्रे लिहिणे, ईमेलचे मसुदे तयार करणे आणि दैनंदिन फायलींची उत्पादकता तिप्पट वाढवणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/copilot.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Microsoft Copilot ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Design -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-50 text-cyan-600 flex items-center justify-center text-2xl border border-cyan-100">
+                🎨
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Design & Presentation</h2>
+                <p class="text-xs text-slate-500 marathi-text">ग्राफिक्स, पोस्टर्स आणि देखणी PPT</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              कोणतेही डिझायनिंग कौशल्य नसताना फक्त मराठी सूचना देऊन व्यावसायिक सणांचे बॅनर, व्हिज्युअल पोस्टर्स आणि संपूर्ण PPT बनवणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/canva.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Canva AI ↗</a>
+              <a href="/tools/gamma.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Gamma App ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Video -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl border border-rose-100">
+                🎥
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Video Creation & Editing</h2>
+                <p class="text-xs text-slate-500 marathi-text">Reels, Shorts आणि ऑटोमॅटिक सबटायटल्स</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              व्हिडिओतील नको असलेला भाग कापणे, आपोआप स्क्रिनवर मराठी/इंग्रजी टेक्स्ट (Captions) दाखवणे आणि व्हिडिओ तयार करणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/capcut.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">CapCut ↗</a>
+              <a href="/tools/google-vids.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Google Vids ↗</a>
+              <a href="/tools/flow.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Flow AI ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Music -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-2xl border border-pink-100">
+                🎵
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Music & Song Generation</h2>
+                <p class="text-xs text-slate-500 marathi-text">शब्दांवरून संगीत, गाणी आणि जिंगल्स</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              मराठी कविता किंवा जाहिरातीच्या ओळी लिहा आणि एका क्लिकवर तालबद्ध संगीत, वादक आणि सुरेल आवाजासह संपूर्ण गाणे तयार करा.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/suno.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Suno AI ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Voice -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl border border-amber-100">
+                🎙️
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Voice & Audio AI</h2>
+                <p class="text-xs text-slate-500 marathi-text">खऱ्या माणसासारखा व्हॉईसओव्हर व कॉलिंग</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              टेक्स्ट मजकूर पेस्ट करा आणि अत्यंत स्पष्ट, नैसर्गिक आवाजातील ऑडिओ फाईल मिळवा. यूट्यूब किंवा ग्राहक सेवेसाठी उत्तम.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/elevenlabs.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">ElevenLabs ↗</a>
+              <a href="/tools/omnivoice.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">OmniVoice ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. AI Development -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl border border-blue-100">
+                👨‍💻
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">AI Development</h2>
+                <p class="text-xs text-slate-500 marathi-text">API, कोडिंग आणि स्वतःचे AI ॲप्स</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              सॉफ्टवेअर अभियंते आणि तांत्रिक विद्यार्थ्यांसाठी Gemini मॉडेल्सची चाचणी घेणे, API की मिळवणे आणि AI सोल्यूशन्स कोड करणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/google-ai-studio.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Google AI Studio ↗</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Automation -->
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-2xl border border-red-100">
+                ⚙️
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-[#041E39] marathi-text">Automation & AI Agents</h2>
+                <p class="text-xs text-slate-500 marathi-text">दोन किंवा अधिक ॲप्स जोडून काम स्वयंचलित करणे</p>
+              </div>
+            </div>
+            <p class="text-sm text-slate-600 marathi-text mb-6">
+              नियमित ईमेल पाठवणे, लीड्स WhatsApp वर पाठवणे, फाईल्स बॅकअप करणे अशी अनेक कामे एकामागोमाग एक आपोआप चालू ठेवणे.
+            </p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <span class="text-xs font-bold text-slate-400 uppercase tracking-wider marathi-text">या विभागातील Tools:</span>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <a href="/tools/zapier.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Zapier ↗</a>
+              <a href="/tools/make.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">Make.com ↗</a>
+              <a href="/tools/n8n.html" class="px-3 py-1.5 bg-slate-50 hover:bg-[#041E39] hover:text-white border border-slate-200 rounded-xl text-xs font-semibold transition-colors">n8n ↗</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

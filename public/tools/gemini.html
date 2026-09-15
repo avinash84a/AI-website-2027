@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Gemini कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
+  <meta name="description" content="Google Gemini मराठीत कसे वापरावे? Google Drive, Gmail, Docs आणि ताज्या इंटरनेट सर्चसह AI चा सोपा वापर.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
+
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow py-10">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <span>→</span>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <span>→</span>
+        <span class="text-[#041E39] font-bold">Google Gemini</span>
+      </nav>
+
+      <!-- Tool Hero Card -->
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-4xl border border-blue-200 shadow-sm">
+              ✨
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">Google Gemini</h1>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">पूर्णपणे मोफत</span>
+              </div>
+              <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
+                Google चे शक्तिशाली मल्टिमोडल AI - ताजी माहिती आणि Google ॲप्सशी जोडलेले
+              </p>
+            </div>
+          </div>
+
+          <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
+            अधिकृत वेबसाईट उघडा ↗
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
+            <span class="font-bold text-[#041E39]">AI Assistant & Research</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
+            <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">विद्यार्थी, संशोधक, ऑफिस</span>
+          </div>
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
+            <span class="font-bold text-[#041E39]">Google</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>Google Gemini म्हणजे काय?</span>
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Google Gemini हे गुगलने विकसित केलेले प्रगत AI मॉडेल आहे. याचे सर्वात मोठे वैशिष्ट्य म्हणजे हे थेट Google Search शी जोडलेले आहे, ज्यामुळे इंटरनेटवरील आजची अगदी ताजी माहिती, चालू घडामोडी आणि अचूक संदर्भ हे काही सेकंदात शोधून देते.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            तसेच, हे Google Workspace (Gmail, Google Docs, YouTube, Google Maps) सह जोडलेले असल्याने, तुम्ही थेट तुमच्या ईमेलमधील माहिती शोधू शकता किंवा YouTube व्हिडिओचा सारांश काढू शकता.
+          </p>
+        </section>
+
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>Gemini ची ३ खास वैशिष्ट्ये</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🌐 थेट गुगल सर्च</div>
+              <div class="text-xs text-slate-600">ताज्या बातम्या, सरकारी योजना आणि आजचे चालू दर लगेच पडताळते.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🖼️ फोटो ओळखून उत्तरे देणे</div>
+              <div class="text-xs text-slate-600">झाडाचे पान, कीटक किंवा गणिताच्या पानाचा फोटो अपलोड करून विश्लेषण मिळवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📺 YouTube व्हिडिओ सारांश</div>
+              <div class="text-xs text-slate-600">एखाद्या २० मिनिटांच्या माहितीपूर्ण व्हिडिओची लिंक दिल्यास त्याचे महत्त्वाचे मुद्दे सांगते.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>Gemini साठी तयार Prompts</span>
+            </h2>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">सरकारी योजना शोधणे</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "महाराष्ट्रातील शेतकऱ्यांसाठी सध्या चालू असलेल्या ३ मुख्य सरकारी अनुदानाच्या योजना कोणत्या आहेत? पात्रता, आवश्यक कागदपत्रे आणि अर्ज करण्याची अधिकृत वेबसाईट मराठीत टेबलच्या स्वरूपात सांग."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>Google खात्याशी थेट संलग्न, वेगळे खाते उघडण्याची गरज नाही.</li>
+                <li>मोफत आवृत्तीत अमर्यादित वेब सर्च.</li>
+                <li>फोटो विश्लेषण (Image Upload) खूप जलद आणि अचूक.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>काहीवेळा कल्पक लेखनात ChatGPT पेक्षा थोडे कोरडे उत्तर देते.</li>
+                <li>जुन्या चॅटची मांडणी समजायला थोडे अधिक लक्ष द्यावे लागते.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

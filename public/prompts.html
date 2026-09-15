@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marathi AI Prompt Library | AI Tools Marathi</title>
+  <meta name="description" content="मराठी भाषिकांसाठी विनामूल्य AI Prompts ची विशाल लायब्ररी. ऑफिस, शिक्षण, दुकान, घर, सोशल मीडिया आणि लेखनासाठी तयार Copy-Paste Prompts.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
+
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/learn.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
+          <span>📚 Beginner Guide</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">नेव्हिगेशन मेनू</span>
+        <button id="mobile-menu-close" type="button" class="text-xs text-slate-500 font-semibold p-1 hover:text-slate-800">बंद करा ✕</button>
+      </div>
+      <a href="/index.html" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl bg-slate-100 text-[#041E39] font-bold text-base">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
+    </div>
+  </header>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="max-w-3xl mb-8">
+        <nav class="text-xs text-slate-500 font-medium mb-3 marathi-text" aria-label="Breadcrumb">
+          <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+          <span class="mx-2">→</span>
+          <span class="text-[#041E39] font-bold">Prompts</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#041E39] marathi-text">Marathi AI Prompt Library</h1>
+        <p class="text-base text-slate-600 mt-2 marathi-text">
+          कोणत्याही AI टूलला अचूक आणि उच्च दर्जाचे काम सांगण्यासाठी तयार मराठी प्रॉम्प्ट्स. फक्त एका क्लिकवर कॉपी करा आणि वापरा!
+        </p>
+      </div>
+
+      <!-- Quick Formula Banner -->
+      <div class="bg-gradient-to-r from-[#041E39] to-[#0a3158] text-white rounded-2xl p-5 mb-8 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+          <span class="text-xs font-bold text-[#F7B500] uppercase tracking-wider marathi-text">💡 सोनेरी नियम</span>
+          <div class="text-sm sm:text-base font-bold tracking-wide marathi-text">
+            चांगला Prompt = <span class="text-[#F7B500]">काम</span> + <span class="text-[#FBAA33]">Context</span> + <span class="text-white">अपेक्षित Output</span> + <span class="text-emerald-300">भाषा</span> + <span class="text-amber-200">Format</span>
+          </div>
+        </div>
+        <a href="/learn.html#formula" class="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-xl text-xs font-bold whitespace-nowrap transition-colors marathi-text">
+          फॉर्म्युला समजावून घ्या →
+        </a>
+      </div>
+
+      <!-- Search & Category Filters -->
+      <div class="bg-white rounded-2xl p-5 border border-slate-200 shadow-sm mb-8 space-y-4">
+        
+        <!-- Search Input -->
+        <div class="relative">
+          <label for="prompt-search-input" class="sr-only">Prompt शोधा</label>
+          <input 
+            type="text" 
+            id="prompt-search-input" 
+            placeholder="🔎 Prompt शोधा... (उदा. Leave email, Water cycle, WhatsApp ad, नाश्ता, Excel...)" 
+            class="w-full pl-12 pr-4 py-3.5 rounded-xl border border-slate-300 bg-[#F8FAFC] text-slate-900 text-sm focus:ring-2 focus:ring-[#F7B500] focus:border-transparent transition-all marathi-text"
+          >
+          <span class="absolute left-4 top-3.5 text-slate-400 text-lg">🔎</span>
+        </div>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex items-center justify-between gap-2 flex-wrap pt-2">
+          <div class="flex items-center gap-2 overflow-x-auto pb-2 w-full sm:w-auto scrollbar-none marathi-text">
+            <button type="button" data-cat="All" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-[#041E39] text-white transition-all whitespace-nowrap">
+              सर्व (All)
+            </button>
+            <button type="button" data-cat="Office" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              🏢 Office
+            </button>
+            <button type="button" data-cat="Education" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              📚 Education
+            </button>
+            <button type="button" data-cat="Business" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              🏪 Business
+            </button>
+            <button type="button" data-cat="Home" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              👩 Home
+            </button>
+            <button type="button" data-cat="Social Media" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              📱 Social Media
+            </button>
+            <button type="button" data-cat="Writing" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              ✍️ Writing
+            </button>
+            <button type="button" data-cat="Research" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              🔎 Research
+            </button>
+            <button type="button" data-cat="Design" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              🎨 Design
+            </button>
+            <button type="button" data-cat="Video" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              🎥 Video
+            </button>
+            <button type="button" data-cat="Productivity" class="prompt-cat-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+              ⚙️ Productivity
+            </button>
+          </div>
+
+          <span id="prompt-results-count" class="text-xs font-bold text-slate-500 marathi-text shrink-0 ml-auto">
+            10+ Prompts उपलब्ध
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Prompts Grid Container -->
+      <div id="prompts-list-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Dynamically rendered by prompts.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+        <a href="/compare.html" class="hover:underline">तुलना</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/prompts.js"></script>
+</body>
+</html>

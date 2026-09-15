@@ -1,0 +1,6 @@
+{
+  "name": "AI Tools Marathi",
+  "description": "AI सोप्या मराठीत - मराठी भाषिकांसाठी सर्व लोकप्रिय AI Tools शिकवणारे शैक्षणिक व्यासपीठ, सोपी मराठी माहिती, प्रात्यक्षिक उदाहरणे, पायऱ्या आणि Copy-Paste Prompts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI शिकण्याची सुरुवात कशी करावी? (Beginner Guide) | AI Tools Marathi</title>
+  <meta name="description" content="मराठीत AI शिकण्यासाठी संपूर्ण नवशिक्यांचे मार्गदर्शक. साइन अप कसे करावे, मराठीत प्रॉम्प्ट कसा लिहावा आणि भीती दूर कशी करावी.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
+
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/prompts.html" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
+          <span>📋 Prompt Library</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <div class="flex items-center justify-between pb-2 border-b border-slate-100">
+        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">नेव्हिगेशन मेनू</span>
+        <button id="mobile-menu-close" type="button" class="text-xs text-slate-500 font-semibold p-1 hover:text-slate-800">बंद करा ✕</button>
+      </div>
+      <a href="/index.html" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2.5 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl bg-slate-100 text-[#041E39] font-bold text-base">शिकूया (Beginner Guide)</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
+    </div>
+  </header>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Page Header -->
+      <div class="mb-12">
+        <nav class="text-xs text-slate-500 font-medium mb-3 marathi-text" aria-label="Breadcrumb">
+          <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+          <span class="mx-2">→</span>
+          <span class="text-[#041E39] font-bold">शिकूया</span>
+        </nav>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#041E39] marathi-text leading-tight">
+          AI शिकण्याची सुरुवात कशी करावी?
+        </h1>
+        <p class="text-base text-slate-600 mt-2 marathi-text">
+          कोणताही तांत्रिक किंवा कोडिंगचा अनुभव नसताना अगदी पहिल्या दिवसापासून AI चा वापर सुरू करण्यासाठी हे संपूर्ण मराठी मार्गदर्शक.
+        </p>
+      </div>
+
+      <!-- SECTION 1: 4 SIMPLE STEPS TO START -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-12">
+        <h2 class="text-2xl font-bold text-[#041E39] mb-6 marathi-text flex items-center gap-2">
+          <span>🚀</span>
+          <span>फक्त ४ सोप्या पायऱ्या (Steps to Start)</span>
+        </h2>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#041E39] text-[#F7B500] font-bold flex items-center justify-center shrink-0 text-lg">
+              १
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-[#041E39] marathi-text">गुगल किंवा ईमेलने मोफत अकाउंट उघडा</h3>
+              <p class="text-sm text-slate-600 marathi-text mt-1">
+                ChatGPT (chatgpt.com) किंवा Google Gemini (gemini.google.com) च्या वेबसाईटवर जा. "Sign in with Google" वर क्लिक करा. यासाठी कोणतेही पैसे किंवा क्रेडिट कार्ड लागत नाही.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#041E39] text-[#F7B500] font-bold flex items-center justify-center shrink-0 text-lg">
+              २
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-[#041E39] marathi-text">तुमच्या स्वतःच्या भाषेत (मराठीत) पहिली सूचना टाईप करा</h3>
+              <p class="text-sm text-slate-600 marathi-text mt-1">
+                इंग्रजीची कोणतीही सक्ती नाही! खाली दिलेल्या चॅट बॉक्समध्ये थेट मराठीत लिहा: <em>"मी पुण्यात राहतो, मला वीकेंडला भेट देण्यासाठी ३ शांत निसर्गरम्य ठिकाणे सुचव."</em> आणि Enter दाबा.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#041E39] text-[#F7B500] font-bold flex items-center justify-center shrink-0 text-lg">
+              ३
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-[#041E39] marathi-text">उत्तर वाचा आणि बोलल्यासारखा संवाद पुढे न्या (Iterate)</h3>
+              <p class="text-sm text-slate-600 marathi-text mt-1">
+                AI ने दिलेले उत्तर तुम्हाला खूप मोठे किंवा अपूर्ण वाटल्यास पुढचा मेसेज पाठवा: <em>"हे उत्तर खूप मोठे आहे, मला फक्त २-२ ओळीत मुद्देसूद सांग."</em> AI लगेच स्वतःचे उत्तर दुरुस्त करेल!
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="w-10 h-10 rounded-xl bg-[#041E39] text-[#F7B500] font-bold flex items-center justify-center shrink-0 text-lg">
+              ४
+            </div>
+            <div>
+              <h3 class="font-bold text-base text-[#041E39] marathi-text">रोजच्या लहान कामांमध्ये सराव सुरू करा</h3>
+              <p class="text-sm text-slate-600 marathi-text mt-1">
+                ईमेल लिहिणे, WhatsApp मेसेजचा मसुदा तयार करणे किंवा नवीन रेसिपी शोधणे अशा छोट्या कामांसाठी दररोज ५ मिनिटे AI वापरून सवय करा.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: PROMPT FORMULA -->
+      <section id="formula" class="bg-gradient-to-br from-[#041E39] to-[#0d3b6a] text-white rounded-3xl p-6 sm:p-8 shadow-md mb-12 scroll-mt-24">
+        <div class="mb-6">
+          <span class="px-3 py-1 bg-[#F7B500] text-[#041E39] text-xs font-bold rounded-full marathi-text">सोनेरी सूत्र</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold mt-2 marathi-text">अचूक Prompt कसा लिहावा?</h2>
+          <p class="text-slate-300 text-sm mt-1 marathi-text">
+            AI हे एका हुशार पण अनोळखी सहाय्यकासारखे आहे. तुम्ही जितकी स्पष्ट सूचना द्याल, तितके उत्कृष्ट काम ते करेल.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 marathi-text">
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10">
+            <div class="text-[#F7B500] font-bold text-sm mb-1">१. काम (Task)</div>
+            <div class="text-xs text-slate-200">तुम्हाला नेमकं काय करून घ्यायचं आहे? (उदा. ईमेल लिहिणे, सारांश काढणे, टेबल बनवणे).</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10">
+            <div class="text-[#FBAA33] font-bold text-sm mb-1">२. संदर्भ (Context)</div>
+            <div class="text-xs text-slate-200">पार्श्वभूमी काय आहे? तुम्ही कोण आहात आणि हे कोणासाठी आहे? (उदा. मी शिक्षक आहे, मुलांसाठी...).</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10">
+            <div class="text-amber-200 font-bold text-sm mb-1">३. स्वरूप (Format)</div>
+            <div class="text-xs text-slate-200">उत्तर कसे हवे? बुलेट पॉईंट्स, ३ परिच्छेद, टेबल की ५ ओळी?</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10">
+            <div class="text-emerald-300 font-bold text-sm mb-1">४. भाषा (Language)</div>
+            <div class="text-xs text-slate-200">शुद्ध मराठी, सोपी बोलचाल मराठी, की व्यावसायिक इंग्रजी?</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10">
+            <div class="text-sky-300 font-bold text-sm mb-1">५. टोन (Tone)</div>
+            <div class="text-xs text-slate-200">विनम्र, उत्साही, व्यावसायिक, की आक्रमक?</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center">
+            <a href="/prompts.html" class="px-4 py-2 bg-[#F7B500] text-[#041E39] font-bold text-xs rounded-xl hover:bg-amber-400 transition-colors">
+              तयार Prompts लायब्ररी पहा →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: BEFORE / AFTER EXAMPLES -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-12">
+        <h2 class="text-2xl font-bold text-[#041E39] mb-4 marathi-text">
+          तुलना: वाईट Prompt vs उत्कृष्ट Prompt
+        </h2>
+        <p class="text-sm text-slate-600 mb-6 marathi-text">
+          फरक समजून घ्या: सामान्य सूचना दिली तर सामान्य उत्तर मिळते, पण विशिष्ट संदर्भ दिल्यास अप्रतिम उत्तर मिळते.
+        </p>
+
+        <div class="space-y-6 marathi-text">
+          <!-- Example 1: Leave Application -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="font-bold text-sm text-[#041E39] mb-3">उदा. १: ऑफिसमध्ये रजेचा अर्ज</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200">
+                <div class="text-xs font-bold text-rose-700 uppercase mb-1">❌ सामान्य / वाईट Prompt:</div>
+                <div class="text-xs text-slate-800">"मला रजेसाठी एक ईमेल लिहून दे."</div>
+                <div class="text-[11px] text-slate-500 mt-2">दोष: किती दिवसांची रजा, काय कारण, कोणाला पाठवायचा हे काहीच सांगितलेले नाही.</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                <div class="text-xs font-bold text-emerald-800 uppercase mb-1">✅ योग्य / उत्कृष्ट Prompt:</div>
+                <div class="text-xs text-slate-800">"मी आयटी कंपनीत सॉफ्टवेअर इंजिनिअर आहे. माझ्या मॅनेजरला पाठवण्यासाठी २ दिवसांच्या आजारपणाच्या रजेचा (Sick Leave) अत्यंत व्यावसायिक आणि विनम्र ईमेल इंग्रजीत लिहून दे. त्यात माझा प्रोजेक्ट सहकारी सांभाळेल असा उल्लेख कर."</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example 2: Shop Poster Text -->
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+            <div class="font-bold text-sm text-[#041E39] mb-3">उदा. २: दुकानाची सणाची जाहिरात</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="p-3.5 rounded-xl bg-rose-50 border border-rose-200">
+                <div class="text-xs font-bold text-rose-700 uppercase mb-1">❌ सामान्य / वाईट Prompt:</div>
+                <div class="text-xs text-slate-800">"कपड्यांच्या दुकानाची जाहिरात कर."</div>
+              </div>
+              <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                <div class="text-xs font-bold text-emerald-800 uppercase mb-1">✅ योग्य / उत्कृष्ट Prompt:</div>
+                <div class="text-xs text-slate-800">"माझे कोल्हापुरात पारंपरिक पैठणी व साड्यांचे दुकान आहे. गुढीपाडव्यानिमित्त सर्व साड्यांवर २०% सवलत आहे. स्थानिक ग्राहकांना आकर्षित करणारा, भावनांना हात घालणारा ३ ओळींचा आकर्षक WhatsApp मेसेज मराठीत इमोजींसह तयार कर."</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS & FEARS -->
+      <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-12">
+        <h2 class="text-2xl font-bold text-[#041E39] mb-6 marathi-text flex items-center gap-2">
+          <span>❓</span>
+          <span>सामान्य भीती आणि शंका (FAQ)</span>
+        </h2>
+
+        <div class="space-y-4 marathi-text">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-[#041E39] mb-1">१. AI मुळे माझी नोकरी धोक्यात येईल का?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              नाही! AI माणसाची जागा घेणार नाही, परंतु "AI वापरणारा माणूस हा AI न वापरणाऱ्या माणसाची जागा नक्की घेऊ शकतो." त्यामुळे भीती न बाळगता AI ला स्वतःचा मदतनीस बनवा.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-[#041E39] mb-1">२. मला इंग्रजी चांगले येत नाही, मी AI वापरू शकतो का?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              होय, १००%! ChatGPT, Gemini आणि Claude हे सर्व टूल्स देवनागरी मराठी अस्खलित समजतात. तुम्ही मराठीत बोला, ते मराठीतच उत्तर देतील.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-[#041E39] mb-1">३. AI वापरायला पैसे लागतात का?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              बहुतेक सर्व मुख्य साधने (ChatGPT, Google Gemini, NotebookLM, Canva, CapCut) अगदी मोफत (Free Tier) उपलब्ध आहेत. नवशिक्यांसाठी मोफत आवृत्ती पुरेशी आहे.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <h3 class="font-bold text-sm text-[#041E39] mb-1">४. माझा गोपनीय किंवा वैयक्तिक डेटा सुरक्षित राहतो का?</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+              कोणत्याही AI टूलमध्ये तुमचे बँक पासवर्ड, आधार नंबर, खाजगी कौटुंबिक फोटो किंवा गोपनीय कंपनी डेटा कधीही टाकू नका. इतर सर्व सर्वसाधारण कामांसाठी हे पूर्णपणे सुरक्षित आहे.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/compare.html" class="hover:underline">तुलना</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
