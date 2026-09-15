@@ -6,9 +6,11 @@
   <title>Microsoft Copilot कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
   <meta name="description" content="Microsoft Copilot मराठीत कसे वापरावे? Excel, Word, PowerPoint आणि ऑफिस कामांसाठी AI चा सुलभ वापर.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -24,33 +26,58 @@
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">AI</div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
@@ -58,10 +85,11 @@
         <span class="text-[#041E39] font-bold">Microsoft Copilot</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-4xl border border-sky-200">
+            <div class="w-16 h-16 rounded-2xl bg-sky-50 text-sky-600 flex items-center justify-center text-4xl border border-sky-200 shadow-sm">
               💼
             </div>
             <div>
@@ -70,65 +98,204 @@
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">मोफत आवृत्ती उपलब्ध</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                ऑफिस कर्मचाऱ्यांसाठी Word, Excel आणि दैनंदिन कामाचा सर्वोत्तम सोबती
+                ऑफिस कर्मचारी व विद्यार्थ्यांसाठी Windows, Excel आणि दैनंदिन कामाचा स्मार्ट AI सोबती
               </p>
             </div>
           </div>
-          <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://copilot.microsoft.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
             <span class="font-bold text-[#041E39]">Office & Productivity</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
             <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
             <span class="font-bold text-[#041E39]">ऑफिस कर्मचारी, क्लर्क, मॅनेजर</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
             <span class="font-bold text-[#041E39]">Microsoft</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">Copilot चा ऑफिसमध्ये कसा फायदा होतो?</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>Copilot चा ऑफिसमध्ये काय फायदा होतो?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Microsoft Copilot हे मायक्रोसॉफ्टचे अधिकृत AI साधन आहे. जर तुम्ही Windows लॅपटॉप वापरत असाल तर हे आधीपासूनच तुमच्या कम्प्युटरमध्ये उपलब्ध असते. Excel मध्ये कठीण फॉर्म्युले तयार करणे, PowerPoint साठी विषय सुचवणे आणि Word डॉक्युमेंट्स दुरुस्त करणे हे याच्या मदतीने अत्यंत सोपे होते.
+            Microsoft Copilot (पूर्वीचे Bing Chat) हे OpenAI च्या प्रगत GPT-4 तंत्रज्ञानावर आधारित मायक्रोसॉफ्टचे अधिकृत AI साधन आहे. जर तुमच्या कम्प्युटरमध्ये Windows 11 किंवा Edge ब्राउझर असेल, तर हे आधीपासूनच मोफत उपलब्ध आहे!
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            विशेष म्हणजे Copilot मध्ये विनामूल्य <strong>Designer (DALL-E 3)</strong> इमेज जनरेशन उपलब्ध आहे, आणि हे वेब सर्च करून सध्याच्या ताज्या बातम्या, सरकारी परिपत्रके आणि Excel फॉर्म्युले अचूकपणे सांगू शकते.
           </p>
         </section>
 
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-          <h2 class="text-xl font-bold text-[#041E39]">तयार Prompt</h2>
-          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="font-bold text-xs text-slate-500 uppercase mb-1">Excel मधील फॉर्म्युला शोधणे</div>
-            <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
-              "माझ्याकडे Excel मध्ये Column A मध्ये कर्मचाऱ्यांची नावे आणि Column B मध्ये त्यांचा पगार आहे. ज्यांचा पगार ५०,००० पेक्षा जास्त आहे अशा कर्मचाऱ्यांची बेरीज करण्यासाठी योग्य Excel Formula कोणता आणि तो कसा लावावा ते समजावून सांग."
-            </p>
-            <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] text-white rounded-lg text-xs font-bold">
-              📋 Prompt कॉपी करा
-            </button>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन ऑफिस वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📊 Excel फॉर्म्युला शोधणे व एरर दुरुस्ती</div>
+              <div class="text-xs text-slate-600">VLOOKUP, XLOOKUP, IF कंडीशन आणि पिव्होट टेबलचे कठीण फॉर्म्युले मराठीत विचारून तयार करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">✉️ व्यावसायिक मराठी व इंग्रजी ईमेल</div>
+              <div class="text-xs text-slate-600">सुट्टीचा अर्ज, क्लायंटला पाठवायचे कोटेशन, किंवा वरिष्ठ अधिकाऱ्यांना औपचारिक अहवाल पाठवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🎨 मोफत AI चित्रे तयार करणे</div>
+              <div class="text-xs text-slate-600">सण, उत्सव किंवा सोशल मीडिया पोस्टसाठी मराठी मजकुरावरून तात्काळ उच्च दर्जाची चित्रे जनरेट करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📑 Edge ब्राउझरमध्ये PDF सारांश</div>
+              <div class="text-xs text-slate-600">कम्प्युटरवर उघडलेली कोणतीही सरकारी किंवा कायदेशीर PDF फाईल उजव्या साईडबारमधून क्षणार्धात मराठीत समजून घेणे.</div>
+            </div>
           </div>
         </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>Microsoft Copilot कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>वेबसाईट किंवा ॲप उघडा:</strong> <code>copilot.microsoft.com</code> ला भेट द्या किंवा Windows कीबोर्डवर <code>Win + C</code> दाबा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>Microsoft खात्याने लॉगिन करा:</strong> मोफत हॉटमेल, आऊटलुक किंवा कोणत्याही मायक्रोसॉफ्ट आयडीने साइन इन करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>संभाषण शैली निवडा:</strong> 'More Creative' (रचनात्मक कामासाठी) किंवा 'More Precise' (ऑफिस फॉर्म्युला व तथ्यांसाठी) सिलेक्ट करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>ऑफिस प्रश्न किंवा इमेज प्रॉम्प्ट द्या:</strong> मराठीत टाइप करा आणि एंटर दाबा. खालील बटणावर क्लिक करून तयार प्रॉम्प्ट वापरू शकता.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>Copilot साठी तयार मराठी Prompts</span>
+            </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Prompt 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">Excel मधील फॉर्म्युला शोधणे</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "माझ्याकडे Excel शीटमध्ये Column A मध्ये कर्मचाऱ्यांची नावे आणि Column B मध्ये त्यांचा मासिक पगार आहे. ज्यांचा पगार ₹५०,००० पेक्षा जास्त आहे त्यांची एकूण बेरीज करण्यासाठी योग्य Excel Formula कोणता? तो कसा लावावा ते पायरीनुसार मराठीत समजावून सांग."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">PowerPoint सादरीकरणासाठी स्लाइड्सची रूपरेषा</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "मला आमच्या ऑफिसमध्ये 'सायबर सुरक्षा आणि ऑनलाइन फसवणूक टाळण्याचे उपाय' या विषयावर ८ स्लाइड्सचे सादरीकरण (PPT) करायचे आहे. प्रत्येक स्लाइडसाठी मुख्य शीर्षक, २-३ महत्त्वाचे मुद्दे आणि वापरता येतील अशी चित्रे मराठीत सुचव."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>मोफत आवृत्तीतही GPT-4 आणि DALL-E 3 इमेज जनरेटर मिळतो.</li>
+                <li>Windows आणि Edge ब्राउझरमध्ये थेट अंगभूत (Built-in) उपलब्ध.</li>
+                <li>इंटरनेटवरील ताज्या माहितीसह संदर्भ लिंक्स प्रदान करतो.</li>
+                <li>Microsoft Word व Excel शी सुसंगत कामांसाठी सर्वोत्तम.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>एका सत्रात (Session) उत्तरांची मर्यादा असते.</li>
+                <li>थेट Word/Excel ॲप्समधील ऑटोमेशनसाठी सशुल्क Microsoft 365 परवाना लागतो.</li>
+                <li>मोफत आवृत्तीत कधीकधी प्रतिसाद मिळण्यास वेळ लागू शकतो.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">ग्राफिक डिझायनिंग, बॅनर आणि पोस्टर्ससाठी Canva AI शिका.</div>
+          </div>
+          <a href="/tools/canva.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            Canva AI शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>

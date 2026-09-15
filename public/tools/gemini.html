@@ -75,6 +75,17 @@
         </button>
       </div>
     </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
+    </div>
   </header>
 
   <main class="flex-grow py-10">
@@ -135,53 +146,108 @@
       <!-- Detail Content Sections -->
       <div class="space-y-10 marathi-text">
 
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
           <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
             <span>📖</span>
-            <span>Google Gemini म्हणजे काय?</span>
+            <span>Google Gemini म्हणजे काय आणि ते कसे काम करते?</span>
           </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Google Gemini हे गुगलने विकसित केलेले प्रगत AI मॉडेल आहे. याचे सर्वात मोठे वैशिष्ट्य म्हणजे हे थेट Google Search शी जोडलेले आहे, ज्यामुळे इंटरनेटवरील आजची अगदी ताजी माहिती, चालू घडामोडी आणि अचूक संदर्भ हे काही सेकंदात शोधून देते.
+            Google Gemini हे गुगलने विकसित केलेले अत्याधुनिक मल्टिमोडल AI मॉडेल आहे. याचे सर्वात मोठे वैशिष्ट्य म्हणजे हे थेट Google Search शी जोडलेले आहे, ज्यामुळे इंटरनेटवरील आजची अगदी ताजी माहिती, चालू घडामोडी आणि अचूक संदर्भ हे काही सेकंदात शोधून देते.
           </p>
           <p class="text-sm text-slate-700 leading-relaxed">
-            तसेच, हे Google Workspace (Gmail, Google Docs, YouTube, Google Maps) सह जोडलेले असल्याने, तुम्ही थेट तुमच्या ईमेलमधील माहिती शोधू शकता किंवा YouTube व्हिडिओचा सारांश काढू शकता.
+            तसेच, हे Google Workspace (Gmail, Google Docs, YouTube, Google Maps, Google Drive) सह जोडलेले असल्याने, तुम्ही थेट तुमच्या ईमेलमधील माहिती शोधू शकता, गुगल डॉक्समध्ये मसुदा तयार करू शकता किंवा YouTube व्हिडिओचा सारांश काढू शकता.
           </p>
         </section>
 
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
           <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
             <span>💡</span>
-            <span>Gemini ची ३ खास वैशिष्ट्ये</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
           </h2>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-              <div class="font-bold text-sm text-[#041E39] mb-1">🌐 थेट गुगल सर्च</div>
-              <div class="text-xs text-slate-600">ताज्या बातम्या, सरकारी योजना आणि आजचे चालू दर लगेच पडताळते.</div>
+              <div class="font-bold text-sm text-[#041E39] mb-1">🌐 थेट चालू घडामोडी व शोध</div>
+              <div class="text-xs text-slate-600">आजची हवामान स्थिती, शेअर बाजार किंवा सरकारी परीक्षांचे निकाल व महत्त्वाच्या तारखांची माहिती मिळवणे.</div>
             </div>
             <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-              <div class="font-bold text-sm text-[#041E39] mb-1">🖼️ फोटो ओळखून उत्तरे देणे</div>
-              <div class="text-xs text-slate-600">झाडाचे पान, कीटक किंवा गणिताच्या पानाचा फोटो अपलोड करून विश्लेषण मिळवणे.</div>
+              <div class="font-bold text-sm text-[#041E39] mb-1">🖼️ फोटो ओळखून उत्तर मिळवणे</div>
+              <div class="text-xs text-slate-600">झाडाचे पान, पिकावरील कीड किंवा गणिताच्या समीकरणाचा फोटो अपलोड करून मराठीत उपाय समजून घेणे.</div>
             </div>
             <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-              <div class="font-bold text-sm text-[#041E39] mb-1">📺 YouTube व्हिडिओ सारांश</div>
-              <div class="text-xs text-slate-600">एखाद्या २० मिनिटांच्या माहितीपूर्ण व्हिडिओची लिंक दिल्यास त्याचे महत्त्वाचे मुद्दे सांगते.</div>
+              <div class="font-bold text-sm text-[#041E39] mb-1">📺 YouTube व्हिडिओचा सारांश</div>
+              <div class="text-xs text-slate-600">कोणत्याही शैक्षणिक किंवा माहितीपूर्ण YouTube व्हिडिओची लिंक देऊन त्यातील मुख्य ५ मुद्दे मराठीत मिळवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">✉️ Gmail व Google Docs इंटिग्रेशन</div>
+              <div class="text-xs text-slate-600">थेट Gmail मधील जुना ईमेल शोधणे किंवा तयार केलेले उत्तर एका क्लिकवर थेट Google Docs मध्ये एक्सपोर्ट करणे.</div>
             </div>
           </div>
         </section>
 
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>Google Gemini कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>गुगल खात्याने लॉग इन करा:</strong> मोबाईल किंवा लॅपटॉप ब्राऊझरमध्ये <code>gemini.google.com</code> उघडा. तुमचे नेहमीचे Gmail खाते वापरून लगेच सुरू करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>प्रश्न विचारा किंवा फोटो अपलोड करा:</strong> खालील प्रॉम्प्ट बारमध्ये मराठीत प्रश्न लिहा किंवा कॅमेऱ्याच्या आयकॉनवर क्लिक करून फोटो निवडा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>Google Double-Check बटण वापरा:</strong> उत्तराच्या खाली असलेल्या 'G' आयकॉनवर क्लिक करा, जेणेकरून माहिती गुगल सर्चशी जुळते का ते हिरव्या रंगात पडताळले जाईल.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>थेट Export करा:</strong> उत्तराखालील शेअर बटणावर क्लिक करून थेट 'Export to Google Docs' किंवा 'Draft in Gmail' वर क्लिक करा.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
           <div class="flex items-center justify-between">
             <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
               <span>📋</span>
-              <span>Gemini साठी तयार Prompts</span>
+              <span>Gemini साठी तयार मराठी Prompts</span>
             </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
           </div>
 
           <div class="space-y-4">
+            <!-- Prompt 1 -->
             <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-              <div class="font-bold text-xs text-slate-500 uppercase mb-1">सरकारी योजना शोधणे</div>
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">सरकारी योजना व अनुदान शोधणे</div>
               <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
-                "महाराष्ट्रातील शेतकऱ्यांसाठी सध्या चालू असलेल्या ३ मुख्य सरकारी अनुदानाच्या योजना कोणत्या आहेत? पात्रता, आवश्यक कागदपत्रे आणि अर्ज करण्याची अधिकृत वेबसाईट मराठीत टेबलच्या स्वरूपात सांग."
+                "महाराष्ट्रातील शेतकऱ्यांसाठी सध्या चालू असलेल्या ३ मुख्य सरकारी कृषी अनुदानाच्या योजना कोणत्या आहेत? पात्रता, आवश्यक कागदपत्रे आणि अर्ज करण्याची अधिकृत वेबसाईट मराठीत टेबलच्या स्वरूपात सांग."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">YouTube व्हिडिओचा सारांश</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "@YouTube या व्हिडिओमध्ये [येथे YouTube लिंक टाका] मांडलेले मुख्य ३ विचार कोणते आहेत? जर एखाद्याला हा व्हिडिओ संपूर्ण पाहायचा नसेल, तर त्याला समजतील असे महत्त्वाचे टेक-अवे सोप्या मराठीत बुलेट पॉईंट्समध्ये सांग."
               </p>
               <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
                 📋 Prompt कॉपी करा
@@ -190,30 +256,43 @@
           </div>
         </section>
 
-        <!-- Pros & Cons -->
+        <!-- 5. Pros & Cons -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
           <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
             <span>⚖️</span>
-            <span>फायदे आणि मर्यादा</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
           </h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
               <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
               <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
-                <li>Google खात्याशी थेट संलग्न, वेगळे खाते उघडण्याची गरज नाही.</li>
-                <li>मोफत आवृत्तीत अमर्यादित वेब सर्च.</li>
+                <li>गुगल खात्याशी थेट संलग्न, वेगळे खाते उघडण्याची गरज नाही.</li>
+                <li>मोफत आवृत्तीत अमर्यादित वेब सर्च व ताजी माहिती.</li>
                 <li>फोटो विश्लेषण (Image Upload) खूप जलद आणि अचूक.</li>
+                <li>तयार झालेले उत्तर थेट Docs किंवा Gmail मध्ये पाठवता येते.</li>
               </ul>
             </div>
             <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
               <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
               <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
-                <li>काहीवेळा कल्पक लेखनात ChatGPT पेक्षा थोडे कोरडे उत्तर देते.</li>
-                <li>जुन्या चॅटची मांडणी समजायला थोडे अधिक लक्ष द्यावे लागते.</li>
+                <li>कधीकधी कल्पक लेखनात ChatGPT पेक्षा थोडे कोरडे उत्तर देते.</li>
+                <li>अतिशय लांबलचक कायदेशीर दस्तावेजांचे विश्लेषण करताना मर्यादा येऊ शकतात.</li>
+                <li>काहीवेळा गुगल सर्चचे परिणाम जसेच्या तसे दाखवण्याचा प्रयत्न करतो.</li>
               </ul>
             </div>
           </div>
         </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">सखोल अभ्यास आणि मानवी लिखाणासाठी Claude शिकायचे आहे का?</div>
+          </div>
+          <a href="/tools/claude.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            Claude शिका →
+          </a>
+        </div>
 
       </div>
 
@@ -227,6 +306,7 @@
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
         <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
       </div>
     </div>
   </footer>

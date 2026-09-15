@@ -4,120 +4,316 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CapCut AI कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
-  <meta name="description" content="CapCut AI व्हिडिओ एडिटींग मराठीत कसे वापरावे? ऑटोमॅटिक सबटायटल्स (Auto Captions), व्हिडिओ कट आणि रील्स एडिटिंग.">
+  <meta name="description" content="CapCut AI व्हिडिओ एडिटिंग मराठीत कसे वापरावे? ऑटोमॅटिक सबटायटल्स (Auto Captions), व्हिडिओ कट, बॅकग्राउंड रिमूव्हर आणि रील्स एडिटिंग.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { primary: '#041E39', secondary: '#F7B500', accent: '#FBAA33', bg: '#F8FAFC', text: '#172033' } },
-          fontFamily: { marathi: ['"Noto Sans Devanagari"', 'sans-serif'], sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'] }
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
         }
       }
     }
   </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://capcut.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
         <span>→</span>
-        <span class="text-[#041E39] font-bold">CapCut</span>
+        <span class="text-[#041E39] font-bold">CapCut AI</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-4xl border border-rose-200">
-              🎬
+            <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center text-4xl border border-rose-200 shadow-sm">
+              🎥
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">CapCut</h1>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">CapCut AI</h1>
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">मोफत आवृत्ती उपलब्ध</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                स्मार्ट ऑटो-कॅप्शन्स आणि व्हायरल रील्स/शॉर्ट्स बनवण्यासाठी जगातील #१ व्हिडिओ एडिटर
+                Reels, Shorts आणि व्हिडिओंसाठी जगातील सर्वात लोकप्रिय स्मार्ट AI एडिटर
               </p>
             </div>
           </div>
-          <a href="https://capcut.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://www.capcut.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
+        <!-- Badges Bar -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
-            <span class="font-bold text-[#041E39]">Video</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
+            <span class="font-bold text-[#041E39]">Video Editing</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
             <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
-            <span class="font-bold text-[#041E39]">क्रिएटर्स, दुकानदार, शिक्षक</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">क्रिएटर्स, दुकानदार, तरुण</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
             <span class="font-bold text-[#041E39]">ByteDance</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">CapCut मधील AI चे जादूई फीचर्स</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>CapCut AI म्हणजे काय आणि ते कसे काम करते?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            १. <strong>Auto Captions:</strong> तुम्ही व्हिडिओत बोलत असताना स्क्रीनवर एकामागोमाग एक चमकदार शब्द आपोआप येतात, ज्याने लोकांचे लक्ष वेधले जाते.<br>
-            २. <strong>Background Remover:</strong> हिरवा पडदा (Green Screen) नसतानाही मागचा बॅकग्राउंड एका सेकंदात बदलता येतो.<br>
-            ३. <strong>Script to Video:</strong> फक्त मजकूर दिला की CapCut आपोआप ऑडिओ आणि योग्य व्हिडिओ क्लिप्स जोडून व्हिडिओ तयार करते.
+            CapCut हे आजच्या काळातील सर्वात सोपे आणि शक्तिशाली व्हिडिओ एडिटिंग टूल आहे. यातील AI अल्गोरिदम व्हिडिओतील आवाज ओळखून आपोआप शब्द (Auto Captions) स्क्रीनवर आणतात, व्हिडिओतील नको असलेला बॅकग्राउंड हिरवा पडदा नसतानाही एका सेकंदात काढून टाकतात, आणि आवाजातील नको असलेला गोंधळ (Background Noise) स्वच्छ करतात.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            मोबाईल, टॅबलेट किंवा कॉम्प्युटर कोणत्याही डिव्हाइसवर CapCut अतिशय वेगाने चालते. इंस्टाग्राम रील्स, यूट्यूब शॉर्ट्स आणि दुकानांच्या व्यावसायिक जाहिरातींसाठी हे जगभरात सर्वाधिक वापरले जाणारे टूल आहे.
           </p>
         </section>
+
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📱 रील्ससाठी ऑटोमॅटिक सबटायटल्स</div>
+              <div class="text-xs text-slate-600">व्हिडिओत तुम्ही बोलत असताना स्क्रीनवर आकर्षक रंगात आणि ॲनिमेशनसह मराठी किंवा इंग्रजी शब्द आपोआप उमटवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🏪 दुकानातील उत्पादनांचे प्रोमो व्हिडिओ</div>
+              <div class="text-xs text-slate-600">नवीन मालाचे २-३ छोटे व्हिडिओ एकत्र करून ट्रेंडिंग गाण्यावर आपोआप बीट मॅचिंगसह जाहिरात बनवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🪄 एका क्लिकवर बॅकग्राउंड काढणे</div>
+              <div class="text-xs text-slate-600">घरातील खोलीत काढलेल्या व्हिडिओचा बॅकग्राउंड काढून मागे देखणे ऑफिस किंवा निसर्गरम्य दृश्य लावणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🎙️ आवाजातील गोंधळ (Noise) हटवणे</div>
+              <div class="text-xs text-slate-600">रस्त्यावरील किंवा पंख्याचा आवाज असलेल्या व्हिडिओतील गोंधळ हटवून फक्त तुमचा आवाज क्रिस्टल क्लिअर करणे.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>CapCut कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>ॲप उघडा व व्हिडिओ निवडा:</strong> CapCut ॲप उघडून <strong>"New Project"</strong> वर टॅप करा आणि मोबाईलमधील व्हिडिओ क्लिप निवडा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>Auto Captions चालू करा:</strong> खालील मेनूमधून <strong>"Text"</strong> → <strong>"Auto Captions"</strong> निवडा. भाषा निवडून Generate वर क्लिक करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>फॉन्ट आणि स्टाईल निवडा:</strong> स्क्रीनवर दिसणाऱ्या अक्षरांचा रंग, आउटलाईन आणि ॲनिमेशन इफेक्ट्स आवडीनुसार सेट करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>उच्च दर्जावर एक्सपोर्ट करा:</strong> वरील उजव्या कोपऱ्यात <strong>1080p</strong> निवडून <strong>Export</strong> करा आणि थेट इंस्टाग्राम किंवा व्हॉट्सॲपवर शेअर करा.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts / Video Concepts -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>CapCut Script-to-Video साठी मराठी संकल्पना</span>
+            </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Prompt 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">दुकानाच्या ऑफरसाठी Script-to-Video</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "गणेशोत्सवानिमित्त आमच्या कपड्यांच्या दुकानात सर्व खरेदीवर ३०% सवलत आहे. यावर आधारित उत्साही, सणासुदीचे संगीत आणि आकर्षक फोटोंसह ३० सेकंदांची मराठी रील तयार करा."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">माहितीपूर्ण रील्स संकल्पना</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "दररोज सकाळी लवकर उठण्याचे ५ मानसिक फायदे. पहिल्या ५ सेकंदात लक्ष वेधून घेणारा हुक आणि स्क्रीनवर ठळक ऑटो-कॅप्शन्स असावेत."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>अतिशय सोपा इंटरफेस आणि नवशिक्यांसाठी आदर्श.</li>
+                <li>स्वयंचलित सबटायटल्स (Auto-Captions) वेगाने आणि अचूक तयार होतात.</li>
+                <li>मोफत आवृत्तीतही वॉटरमार्क सहज काढता येतो.</li>
+                <li>मोबाईल आणि कॉम्प्युटर दोन्हीवर सुरळीत चालते.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>काही प्रगत AI इफेक्ट्स आणि क्लाउड स्टोरेजसाठी Pro सबस्क्रिप्शन लागते.</li>
+                <li>मोठ्या 4K फाईल्ससाठी चांगल्या हार्डवेअरची आवश्यकता असते.</li>
+                <li>काही देशांत किंवा नेटवर्कवर डाउनलोडसाठी अधिकृत वेबसाईट तपासावी लागते.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">व्हिडिओसाठी मानवी स्वराचा मराठी ऑडिओ आणि Voiceover शिकायचे आहे का?</div>
+          </div>
+          <a href="/tools/elevenlabs.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            ElevenLabs शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>

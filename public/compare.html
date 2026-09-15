@@ -242,6 +242,14 @@
   <script src="/js/main.js"></script>
   <script src="/js/tools.js"></script>
   <script>
+    // Helper to safely format tool URLs for both web servers and static file environments
+    function getToolUrl(slug) {
+      if (!slug) return '#';
+      const cleanSlug = slug.replace(/^\/?(tools\/)?/, '');
+      // If opened directly via file:// protocol, use relative path; otherwise use root-relative path
+      return window.location.protocol === 'file:' ? `tools/${cleanSlug}` : `/tools/${cleanSlug}`;
+    }
+
     // Comparison Table & Interactive Quiz Script
     const QUIZ_DATA = {
       office: {
@@ -341,7 +349,7 @@
                 <div class="text-xs text-slate-600">${r.desc}</div>
               </div>
             </div>
-            <a href="/tools/${r.slug}" class="px-3 py-1.5 bg-[#041E39] text-white rounded-lg text-xs font-semibold hover:bg-[#082e54] whitespace-nowrap">
+            <a href="${getToolUrl(r.slug)}" class="px-3 py-1.5 bg-[#041E39] text-white rounded-lg text-xs font-semibold hover:bg-[#082e54] whitespace-nowrap">
               शिका →
             </a>
           </div>
@@ -375,7 +383,11 @@
 
     function renderTable(category) {
       const tbody = document.getElementById('comparison-table-body');
-      if (!tbody || typeof ALL_TOOLS === 'undefined') return;
+      if (!tbody) return;
+      if (typeof ALL_TOOLS === 'undefined' || !Array.isArray(ALL_TOOLS)) {
+        console.warn('ALL_TOOLS is not loaded yet');
+        return;
+      }
 
       const filtered = category === 'All' 
         ? ALL_TOOLS 
@@ -409,7 +421,7 @@
               ${t.category}
             </td>
             <td class="py-3.5 px-4 text-center whitespace-nowrap">
-              <a href="/tools/${t.slug}" class="inline-flex items-center gap-1 text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text">
+              <a href="${getToolUrl(t.slug)}" class="inline-flex items-center gap-1 text-xs font-bold text-[#041E39] hover:text-[#F7B500] marathi-text">
                 <span>माहिती वाचा</span>
                 <span aria-hidden="true">→</span>
               </a>

@@ -4,53 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google AI Studio कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
-  <meta name="description" content="Google AI Studio मराठीत कसे वापरावे? Gemini API Key, प्रॉम्प्ट चाचणी आणि स्वतःचे AI ॲप्स तयार करण्याचे व्यासपीठ.">
+  <meta name="description" content="Google AI Studio मराठीत कसे वापरावे? Gemini मॉडेल्सची मोफत चाचणी, API Key मिळवणे, System Prompts आणि AI ॲप्स तयार करण्याचे संपूर्ण मार्गदर्शन.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { primary: '#041E39', secondary: '#F7B500', accent: '#FBAA33', bg: '#F8FAFC', text: '#172033' } },
-          fontFamily: { marathi: ['"Noto Sans Devanagari"', 'sans-serif'], sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'] }
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
         }
       }
     }
   </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
@@ -58,64 +101,218 @@
         <span class="text-[#041E39] font-bold">Google AI Studio</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-4xl border border-blue-200">
-              👨‍💻
+            <div class="w-16 h-16 rounded-2xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-4xl border border-indigo-200 shadow-sm">
+              ⚡
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">Google AI Studio</h1>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">मोफत डेव्हलपर ॲक्सेस</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-indigo-100 text-indigo-900 marathi-text">Developer Free Tier</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                Gemini मॉडेल्सच्या मदतीने स्वतःचे AI ॲप्स आणि सोल्यूशन्स कोड करण्याचे व्यासपीठ
+                Gemini मॉडेल्सची प्रत्यक्ष चाचणी, प्रॉम्प्ट डिझाइन आणि मोफत API Key मिळवा
               </p>
             </div>
           </div>
-          <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://aistudio.google.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
+        <!-- Badges Bar -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
-            <span class="font-bold text-[#041E39]">AI Development</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
+            <span class="font-bold text-[#041E39]">Coding & API</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
-            <span class="font-bold text-rose-700">★★★ Advanced</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
+            <span class="font-bold text-rose-800">★★★ Advanced</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
-            <span class="font-bold text-slate-800">सॉफ्टवेअर इंजिनिअर, कोडिंग शिकणारे</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">डेव्हलपर्स, तंत्रस्नेही, विद्यार्थी</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
-            <span class="font-bold text-slate-800">Google</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
+            <span class="font-bold text-[#041E39]">Google</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">Google AI Studio म्हणजे काय?</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>Google AI Studio म्हणजे काय आणि ते कसे काम करते?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Google AI Studio हे डेव्हलपर्स आणि तंत्रज्ञानप्रेमींसाठी सर्वात जलद साधन आहे, जिथे तुम्ही Gemini Flash आणि Gemini Pro या अत्यंत प्रगत मॉडेल्सची चाचणी घेऊ शकता, API Key मिळवू शकता आणि स्वतःचे ॲप्स, ऑटोमेशन किंवा सॉफ्टवेअर सोल्यूशन्स तयार करू शकता.
+            Google AI Studio हे गुगलचे अधिकृत वेब-आधारित प्लॅटफॉर्म आहे, जिथे डेव्हलपर्स आणि तंत्रज्ञानप्रेमी Google च्या सर्वात प्रगत <strong>Gemini 1.5 Flash आणि 1.5 Pro</strong> मॉडेल्सवर प्रयोग करू शकतात. यामध्ये तब्बल २० लाख टोकन्स (सुमारे १५०० पानांचे पुस्तक किंवा १ तासाचा व्हिडिओ) एकाच वेळी अपलोड करून प्रश्न विचारण्याची क्षमता आहे.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            येथून तुम्ही काही सेकंदात स्वतःची मोफत <strong>API Key</strong> मिळवून तुमच्या स्वतःच्या वेबसाईट, ॲप किंवा ऑटोमेशन बॉटमध्ये Gemini AI जोडण्याची सुविधा मिळवू शकता.
           </p>
         </section>
+
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🔑 मोफत Gemini API Key मिळवणे</div>
+              <div class="text-xs text-slate-600">स्वतःच्या सॉफ्टवेअर किंवा प्रोजेक्टमध्ये AI जोडण्यासाठी विनामूल्य अधिकृत API की एका क्लिकवर तयार करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🤖 मराठी ग्राहक सेवा बॉट (System Prompt)</div>
+              <div class="text-xs text-slate-600">AI ला नियम शिकवून फक्त तुमच्या दुकानाचे किंवा सेवेचे प्रश्न अस्खलित मराठीत उत्तर देणारा बॉट बनवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📚 १ हजार पानांच्या ग्रंथाचे विश्लेषण</div>
+              <div class="text-xs text-slate-600">मोठी शासकीय राजपत्रे, कायद्याची पुस्तके किंवा मेडिकल रिपोर्ट्स थेट अपलोड करून त्यातील अचूक माहिती विचारणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">💻 एका क्लिकवर Python/JavaScript कोड</div>
+              <div class="text-xs text-slate-600">तयार केलेल्या प्रॉम्टचे थेट कार्यक्षम कोडमध्ये (Get Code) रूपांतर करून प्रोजेक्टमध्ये वापरणे.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>Google AI Studio कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>लॉगिन करा:</strong> <code>aistudio.google.com</code> वर जाऊन तुमच्या Google खात्याने मोफत लॉगिन करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>प्रॉम्प्ट प्रकार निवडा:</strong> डाव्या बाजूला <strong>"Create new prompt"</strong> वर क्लिक करा (Chat Prompt किंवा Freeform Prompt).
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>System Instructions द्या:</strong> <em>"तू एक नम्र मराठी बँक सहाय्यक आहेस..."</em> अशी भूमिका ठरवून उजवीकडे Gemini 1.5 Flash मॉडेल निवडा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>Get API Key:</strong> वरील निळ्या रंगाच्या <strong>"Get API key"</strong> वर क्लिक करून स्वतःची मोफत की कॉपी करा.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>System Prompt चे शक्तिशाली उदाहरण</span>
+            </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Prompt 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">मराठी ग्राहक सेवेसाठी System Instruction</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "तू एका स्थानिक किराणा स्टोअरचा डिजिटल सहाय्यक आहेस. ग्राहकांच्या प्रश्नांची उत्तरे नेहमी आदराने आणि शुद्ध मराठीत दे. ग्राहकांना उपलब्ध वस्तू, सवलती आणि होम डिलिव्हरीचे नियम स्पष्ट सांग."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">JSON फॉरमॅटमध्ये डेटा मिळवण्यासाठी Prompt</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "दिलेल्या मराठी बातम्यांचे वाचन कर आणि त्यातील मुख्य मुद्दे, दिनांक आणि व्यक्तींची नावे फक्त JSON फॉरमॅटमध्ये एक्सपोर्ट कर. इतर कोणतेही स्पष्टीकरण देऊ नकोस."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>२ दशलक्ष टोकन्सची प्रचंड मेमरी (मोठी पुस्तके व व्हिडिओ विश्लेषण).</li>
+                <li>विकासकांसाठी मोफत API कोटा (Free Tier) उपलब्ध.</li>
+                <li>प्रॉम्प्ट्सची थेट Python, JavaScript किंवा cURL कोडमध्ये निर्मिती.</li>
+                <li>गुगलचे अत्याधुनिक Gemini 1.5 मॉडेल्स थेट वापरण्याची संधी.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>तांत्रिक ज्ञान नसलेल्या सर्वसामान्य वापरकर्त्यांसाठी थोडे कठीण वाटू शकते.</li>
+                <li>इंटरफेस इंग्रजीत असून प्रगत पॅरामीटर्स समजून घ्यावे लागतात.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">या API चा वापर करून स्वतःचे ऑटोमेशन सर्व्हर कसे चालवायचे ते शिका:</div>
+          </div>
+          <a href="/tools/n8n.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            n8n शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>

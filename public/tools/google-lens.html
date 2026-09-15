@@ -4,53 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Google Lens कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
-  <meta name="description" content="Google Lens मराठीत कसे वापरावे? मोबाईल कॅमेऱ्याने फोटो काढून भाषांतर करणे, मजकूर कॉपी करणे आणि वस्तू शोधणे.">
+  <meta name="description" content="Google Lens मराठीत कसे वापरावे? कॅमेरा धरून थेट मराठीत भाषांतर (Translate), मजकूर कॉपी करणे आणि फोटोवरून माहिती शोधणे.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { primary: '#041E39', secondary: '#F7B500', accent: '#FBAA33', bg: '#F8FAFC', text: '#172033' } },
-          fontFamily: { marathi: ['"Noto Sans Devanagari"', 'sans-serif'], sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'] }
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
         }
       }
     }
   </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://lens.google.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://lens.google" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
@@ -58,66 +101,213 @@
         <span class="text-[#041E39] font-bold">Google Lens</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-4xl border border-amber-200">
+            <div class="w-16 h-16 rounded-2xl bg-green-50 text-green-700 flex items-center justify-center text-4xl border border-green-200 shadow-sm">
               📸
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">Google Lens</h1>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">मोफत मोबाईल ॲप</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">१००% मोफत</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                कॅमेऱ्याने पुस्तकातील ओळी कॉपी करा, इंग्रजी बोर्डचे मराठीत भाषांतर करा
+                मोबाईल कॅमेरा धरून फोटोवरून माहिती, थेट मराठीत भाषांतर आणि शोध
               </p>
             </div>
           </div>
-          <a href="https://lens.google.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://lens.google" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
+        <!-- Badges Bar -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
-            <span class="font-bold text-[#041E39]">Vision & Camera AI</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
+            <span class="font-bold text-[#041E39]">Research & Vision</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
-            <span class="font-bold text-emerald-700">★ Super Easy</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
+            <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
-            <span class="font-bold text-slate-800">सर्व स्मार्टफोन वापरकर्ते</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">नागरिक, गृहिणी, ज्येष्ठ, विद्यार्थी</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
-            <span class="font-bold text-slate-800">Google</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
+            <span class="font-bold text-[#041E39]">Google</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">Google Lens चा रोजच्या जीवनात वापर</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>Google Lens म्हणजे काय आणि ते कसे काम करते?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            १. <strong>कागदावरील मजकूर कॉपी:</strong> वहीतील किंवा सरकारी अर्जातील मजकुराचा फोटो काढून थेट WhatsApp वर टेक्स्ट म्हणून पाठवू शकता.<br>
-            २. <strong>थेट भाषांतर (Live Translate):</strong> दुकानाचा बोर्ड किंवा इंग्रजी सूचना कॅमेऱ्यासमोर धरताच ती मराठीत दिसू लागते.<br>
-            ३. <strong>रोगांची ओळख:</strong> शेतातील पिकाच्या पानावर पडलेले डाग स्कॅन करून तो कोणता रोग आहे ते ओळखता येते.
+            Google Lens हे गुगलचे एक मोफत आणि अत्यंत उपयुक्त व्हिज्युअल AI टूल आहे. तुम्ही मोबाईलच्या कॅमेऱ्याने जे पाहता, ते समजून घेणे ही याची खासियत आहे. टाईप न करता केवळ कॅमेरा कोणत्याही वस्तूवर, इंग्रजी पाटीवर किंवा पुस्तकावर धरल्यास ते क्षणात त्याचे मराठीत भाषांतर करते आणि त्या वस्तूची सविस्तर माहिती दाखवते.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            जवळपास प्रत्येक अँड्रॉइड फोनमध्ये Google ॲप किंवा कॅमेऱ्यामध्ये हे आधीच इनबिल्ट असते, तर आयफोनवर Google ॲपद्वारे वापरता येते. तंत्रज्ञान जास्त न समजणाऱ्या व्यक्तींसाठीही हे वापरणे अतिशय सोपे आहे.
           </p>
         </section>
+
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🪧 इंग्रजी पाट्या व सरकारी नोटीसांचे भाषांतर</div>
+              <div class="text-xs text-slate-600">रेल्वे स्टेशन, बँक किंवा दवाखान्यातील इंग्रजी फलकावर कॅमेरा धरताच स्क्रीनवर थेट मराठीत अक्षरे दिसू लागतात.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📋 कागदावरील मजकूर कॉम्प्युटरवर कॉपी करणे</div>
+              <div class="text-xs text-slate-600">पुस्तकाचे पान किंवा कागद टाईप न करता, फोटो काढून एका क्लिकवर सर्व मजकूर थेट लॅपटॉप किंवा व्हॉट्सॲपवर पाठवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🌿 झाडे, फुले आणि शेतीतील किडींची माहिती</div>
+              <div class="text-xs text-slate-600">कुठल्याही अनोळखी झाडाचा किंवा पानांवरील रोगाचा फोटो काढून त्या वनस्पतीचे नाव आणि उपायांची माहिती मिळवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">💊 औषधांच्या स्ट्रिपचे वाचन व समज</div>
+              <div class="text-xs text-slate-600">औषधांच्या पाकिटावरील बारीक इंग्रजी मजकूर मोठा करून वाचणे आणि त्याचे नेमके काम समजून घेणे.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>Google Lens कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>Lens उघडा:</strong> मोबाईलच्या स्क्रीनवरील Google Search बारमधील लहान कॅमेरा आयकॉनवर किंवा <strong>Google Lens</strong> ॲपवर टॅप करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>पर्याय निवडा:</strong> खालील बाजूस <strong>Translate</strong> (भाषांतर), <strong>Text</strong> (मजकूर कॉपी), किंवा <strong>Search</strong> (शोध) यापैकी आवश्यक पर्याय निवडा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>कॅमेरा रोखा:</strong> ज्या कागदपत्राचे किंवा वस्तूचे वाचन करायचे आहे, त्यावर कॅमेरा स्थिर धरा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>थेट निकाल पहा:</strong> Translate निवडले असल्यास इंग्रजी शब्दांच्या जागी थेट मराठी शब्द दिसतील. "Copy text" वर दाबून तुम्ही तो मजकूर कोठेही पेस्ट करू शकता.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Real-life Tips -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>Google Lens वापरण्यासाठी महत्त्वाच्या टिप्स</span>
+            </h2>
+            <a href="/learn.html" class="text-xs font-bold text-[#041E39] hover:underline">अधिक शिका →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Tip 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">मराठी भाषांतर ऑफलाइन कसे चालवायचे?</div>
+              <p class="text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 mb-2">
+                Lens मधील Translate मेनूमध्ये जाऊन मराठी भाषा डाऊनलोड करून ठेवा. यामुळे इंटरनेट नसताना किंवा प्रवासातही पाट्यांचे मराठी भाषांतर विनाअडथळा होते.
+              </p>
+            </div>
+
+            <!-- Tip 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">कागदावरील इंग्रजी गणित सोडवणे</div>
+              <p class="text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 mb-2">
+                खालील मेनूमधून "Homework" पर्याय निवडा आणि पुस्तकातील गणितावर कॅमेरा धरा. Google Lens पायरी-पायरीने संपूर्ण उत्तर आणि स्पष्टीकरण दाखवते.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>१००% मोफत आणि जाहिरातमुक्त गुगल सेवा.</li>
+                <li>काहीही न टाईप करता केवळ फोटोवरून थेट काम होते.</li>
+                <li>मराठी, इंग्रजी, हिंदीसह जगातील १००+ भाषांना सपोर्ट.</li>
+                <li>छापील मजकूर अचूक कॉपी करून कॉम्प्युटरवर पाठवता येतो.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>खराब हस्तलेखन (Handwriting) किंवा अंधुक फोटो वाचताना चुका होऊ शकतात.</li>
+                <li>थेट वेब शोधासाठी इंटरनेट कनेक्शन आवश्यक असते.</li>
+                <li>औषधोपचारांसारख्या संवेदनशील बाबींसाठी स्वतः डॉक्टरचा सल्ला आवश्यक.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">इंटरनेटवरून पुराव्यासह माहिती आणि उत्तरे शोधणारा AI Search शिका:</div>
+          </div>
+          <a href="/tools/perplexity.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            Perplexity शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>

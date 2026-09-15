@@ -4,53 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Suno AI कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
-  <meta name="description" content="Suno AI मराठीत कसे वापरावे? फक्त दोन ओळींच्या कवितेवरून संगीत, सुरेल गायन आणि संपूर्ण मराठी गाणे तयार करणारे AI.">
+  <meta name="description" content="Suno AI संगीत निर्मिती मराठीत कशी करावी? फक्त शब्दांवरून मराठी गाणी, भक्तीगीते, लोकगीते आणि YouTube BGM तयार करा.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { primary: '#041E39', secondary: '#F7B500', accent: '#FBAA33', bg: '#F8FAFC', text: '#172033' } },
-          fontFamily: { marathi: ['"Noto Sans Devanagari"', 'sans-serif'], sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'] }
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
         }
       }
     }
   </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://suno.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://suno.com" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
@@ -58,10 +101,11 @@
         <span class="text-[#041E39] font-bold">Suno AI</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-pink-50 text-pink-600 flex items-center justify-center text-4xl border border-pink-200">
+            <div class="w-16 h-16 rounded-2xl bg-purple-50 text-purple-700 flex items-center justify-center text-4xl border border-purple-200 shadow-sm">
               🎵
             </div>
             <div>
@@ -70,65 +114,205 @@
                 <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 marathi-text">दररोज मोफत गाणी</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                कोणत्याही मराठी ओळींचे सुरेल गाण्यात रूपांतर करणारे जगातील सर्वोत्कृष्ट संगीत AI
+                फक्त २ ओळी लिहा आणि तयार मिळवा गायकाच्या आवाजातील संपूर्ण मराठी गाणे
               </p>
             </div>
           </div>
-          <a href="https://suno.com" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://suno.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
+        <!-- Badges Bar -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
             <span class="font-bold text-[#041E39]">Music & Audio</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
             <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
-            <span class="font-bold text-slate-800">कवी, संगीतप्रेमी, ब्रँड्स</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">क्रिएटर्स, रील मेकर्स, संगीतप्रेमी</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
-            <span class="font-bold text-slate-800">Suno Inc</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
+            <span class="font-bold text-[#041E39]">Suno Inc.</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">Suno AI कसे काम करते?</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>Suno AI म्हणजे काय आणि ते कसे काम करते?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            तुम्ही फक्त गाण्याचे बोल (Lyrics) टाईप करा आणि संगीताचा प्रकार सांगा (उदा. "Marathi Folk, Dhol Tasha, Energetic" किंवा "Soft Acoustic Romantic"). Suno काही सेकंदात स्त्री किंवा पुरुषाच्या आवाजात संपूर्ण वाद्यवृंदासह २ मिनिटांचे सुरेल गाणे तयार करते.
+            Suno AI हे संगीत निर्मितीच्या क्षेत्रातील क्रांतिकारी AI टूल आहे. यापूर्वी गाणे बनवण्यासाठी गायक, संगीतकार, वादक आणि स्टुडिओची गरज असायची. Suno मध्ये तुम्हाला केवळ गाण्याचा विषय सांगायचा असतो किंवा स्वतः लिहिलेले मराठी शब्द (Lyrics) द्यायचे असतात.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            AI स्वतः अत्यंत सुमधुर चालीसह स्त्री किंवा पुरुषाच्या आवाजात गाणे गाते, आणि मागे ढोलकी, तबला, बासरी, गिटार किंवा वेस्टर्न बीट्सचे संगीत वाजवते. एका मिनिटात स्टुडिओ दर्जाचे संपूर्ण २ मिनिटांचे गाणे तयार होते.
           </p>
         </section>
 
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
-          <h2 class="text-xl font-bold text-[#041E39]">तयार Prompt आयडिया</h2>
-          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
-            <div class="font-bold text-xs text-slate-500 uppercase mb-1">सणाचे मराठी जिंगल</div>
-            <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
-              "Genre: Upbeat Marathi folk, energetic dhol tasha. Lyrics: गुढीपाडव्याचा सण आला, आनंद मनी दाटला, नवीन वर्षाच्या सर्वांना खूप खूप शुभेच्छा!"
-            </p>
-            <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] text-white rounded-lg text-xs font-bold">
-              📋 Prompt कॉपी करा
-            </button>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🎂 वाढदिवसासाठी खास नाव असलेले गाणे</div>
+              <div class="text-xs text-slate-600">मित्राचे किंवा कौटुंबिक सदस्याचे नाव टाकून त्याच्या आवडीनुसार रॉक किंवा लावणी स्टाईल वाढदिवसाचे गाणे बनवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📹 YouTube आणि रील्ससाठी कॉपीराइट-फ्री संगीत</div>
+              <div class="text-xs text-slate-600">व्हिडिओच्या पार्श्वसंगीतासाठी (BGM) कोणाचेही कॉपीराइट न येणारे १००% युनिक मराठी ट्यून तयार करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🏪 दुकानाचे किंवा ब्रँडचे जाहिरात जिंगल</div>
+              <div class="text-xs text-slate-600">दुकानाच्या नावाची आणि ऑफरची आकर्षक संगीतमय जिंगल ३० सेकंदात तयार करून ग्राहकांना ऐकवणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">✍️ स्वतःच्या कवितांचे सुरेल गाण्यात रूपांतर</div>
+              <div class="text-xs text-slate-600">तुम्ही स्वतः लिहिलेल्या मराठी ओळी पेस्ट करून शास्त्रीय, भावगीत किंवा आधुनिक पॉप गाण्यात ऐकणे.</div>
+            </div>
           </div>
         </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>Suno AI कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>मोफत लॉगिन करा:</strong> <code>suno.com</code> उघडा आणि Google किंवा Discord खात्याद्वारे साइन इन करा. दररोज ५० मोफत क्रेडिट्स मिळतात.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>"Create" वर क्लिक करा:</strong> डाव्या बाजूला <strong>"Create"</strong> बटण निवडा आणि वरील बाजूस <strong>"Custom Mode"</strong> चालू करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>शब्द आणि शैली ठरवा:</strong> <em>Lyrics</em> मध्ये मराठी शब्द टाका, आणि <em>Style of Music</em> मध्ये <code>Marathi Folk, Dholak, Energetic</code> किंवा <code>Acoustic Pop</code> लिहा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>Create & Download:</strong> "Create" दाबा. ३० सेकंदात दोन वेगवेगळ्या चालींची गाणी तयार होतील. आवडलेले गाणे MP3 किंवा व्हिडिओसह डाऊनलोड करा.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>Suno साठी तयार मराठी गाण्याचे Prompts</span>
+            </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Prompt 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">महाराष्ट्राच्या सह्याद्रीवर उत्साही गाणे</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "सह्याद्रीच्या कडेकपारीत, गडकिल्ल्यांच्या पावन मातीत, गर्जतो आवाज शिवबांचा, अभिमान आम्हा महाराष्ट्राचा. Style: Marathi Powada, Energetic Dhol Tasha, Heavy Beats, Male Vocal"
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">शांत व गोड भावगीत (Acoustic)</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "हळूच आले आठवणींचे मेघ दाटूनी, गाऊ लागले मन हे पुन्हा गीत जुने. Style: Soft Marathi Bhavgeet, Acoustic Guitar, Flute, Soothing Female Vocal"
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 Prompt कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>कोणतेही वाद्य किंवा संगीताचे शिक्षण न घेता थेट गाणे तयार होते.</li>
+                <li>मराठी देवनागरी शब्द अचूक तालात गाते.</li>
+                <li>दररोज ५० मोफत क्रेडिट्स (१० गाणी बनवण्याची संधी) मिळतात.</li>
+                <li>MP3 ऑडिओ आणि लिरिक्स व्हिडिओ दोन्ही फॉरमॅट उपलब्ध.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>मोफत आवृत्तीतील गाणी व्यावसायिक रीतीने विकता येत नाहीत (त्यासाठी प्रो प्लॅन लागतो).</li>
+                <li>कधीकधी मराठी शब्दांचे उच्चार थोडे पाश्चात्य ढंगाचे वाटू शकतात.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">स्पष्ट मराठी आवाजात व्हॉईसओव्हर आणि वाचन करायचे आहे का?</div>
+          </div>
+          <a href="/tools/elevenlabs.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            ElevenLabs शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>

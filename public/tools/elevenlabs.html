@@ -4,53 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ElevenLabs कसे वापरावे? (मराठीत संपूर्ण माहिती) | AI Tools Marathi</title>
-  <meta name="description" content="ElevenLabs AI Voiceover मराठीत कसे वापरावे? खऱ्या माणसासारखा स्पष्ट मराठी आवाज, YouTube व्हिडिओसाठी व्हॉईसओव्हर.">
+  <meta name="description" content="ElevenLabs AI Voiceover मराठीत कसे वापरावे? खऱ्या माणसासारखा स्पष्ट मराठी आवाज, YouTube व्हिडिओसाठी व्हॉईसओव्हर आणि Text to Speech.">
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: { primary: '#041E39', secondary: '#F7B500', accent: '#FBAA33', bg: '#F8FAFC', text: '#172033' } },
-          fontFamily: { marathi: ['"Noto Sans Devanagari"', 'sans-serif'], sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'] }
+          colors: {
+            brand: {
+              primary: '#041E39',
+              secondary: '#F7B500',
+              accent: '#FBAA33',
+              bg: '#F8FAFC',
+              text: '#172033',
+            }
+          },
+          fontFamily: {
+            marathi: ['"Noto Sans Devanagari"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '"Noto Sans Devanagari"', 'sans-serif'],
+          }
         }
       }
     }
   </script>
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/custom.css">
 </head>
 <body class="bg-[#F8FAFC] text-[#172033] min-h-screen flex flex-col font-sans">
 
-  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200">
+  <!-- Sticky Header -->
+  <header id="main-header" class="sticky top-0 z-40 bg-white border-b border-slate-200 transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="/index.html" class="flex items-center gap-3">
-        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl">AI</div>
+      <a href="/index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-[#041E39] text-[#F7B500] flex items-center justify-center font-extrabold text-2xl shadow-sm border border-slate-700">
+          AI
+        </div>
         <div class="flex flex-col">
-          <span class="text-xl font-bold text-[#041E39] leading-tight">AI Tools Marathi</span>
+          <span class="text-xl font-bold tracking-tight text-[#041E39] leading-tight">AI Tools Marathi</span>
           <span class="text-xs font-semibold text-[#F7B500] marathi-text">AI सोप्या मराठीत</span>
         </div>
       </a>
-      <nav class="hidden lg:flex items-center gap-1 text-sm font-medium text-slate-700 marathi-text">
-        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">मुख्यपृष्ठ</a>
-        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100">AI Tools</a>
-        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Categories</a>
-        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">Prompts</a>
-        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">शिकूया</a>
-        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">तुलना</a>
-        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:bg-slate-100">About</a>
+
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-slate-700 marathi-text">
+        <a href="/index.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="px-3.5 py-2 rounded-lg text-[#041E39] font-bold bg-slate-100 transition-colors">AI Tools</a>
+        <a href="/categories.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Categories</a>
+        <a href="/prompts.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">Prompts</a>
+        <a href="/learn.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">शिकूया</a>
+        <a href="/compare.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">तुलना</a>
+        <a href="/audience.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">कोणासाठी?</a>
+        <a href="/about.html" class="px-3.5 py-2 rounded-lg hover:text-[#041E39] hover:bg-slate-100 transition-colors">About</a>
       </nav>
-      <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold marathi-text">
-        अधिकृत साईट ↗
-      </a>
+
+      <div class="flex items-center gap-3">
+        <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 bg-[#041E39] text-white hover:bg-[#082e54] rounded-xl text-xs font-bold transition-all marathi-text">
+          <span>अधिकृत साईट ↗</span>
+        </a>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="मेनू उघडा">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-b border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 marathi-text">
+      <a href="/index.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">मुख्यपृष्ठ</a>
+      <a href="/tools.html" class="block px-3 py-2 rounded-xl text-[#041E39] font-bold bg-slate-100 text-base">AI Tools</a>
+      <a href="/categories.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Categories</a>
+      <a href="/prompts.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">Prompts</a>
+      <a href="/learn.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">शिकूया</a>
+      <a href="/compare.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">तुलना</a>
+      <a href="/audience.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">कोणासाठी?</a>
+      <a href="/about.html" class="block px-3 py-2 rounded-xl text-slate-700 hover:bg-slate-50 text-base font-medium">About</a>
     </div>
   </header>
 
   <main class="flex-grow py-10">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2">
+      
+      <!-- Breadcrumbs -->
+      <nav class="text-xs text-slate-500 font-medium mb-6 marathi-text flex items-center gap-2" aria-label="Breadcrumb">
         <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
         <span>→</span>
         <a href="/tools.html" class="hover:underline">AI Tools</a>
@@ -58,64 +101,219 @@
         <span class="text-[#041E39] font-bold">ElevenLabs</span>
       </nav>
 
+      <!-- Tool Hero Card -->
       <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-slate-100">
           <div class="flex items-center gap-4">
-            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-4xl border border-amber-200">
+            <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-4xl border border-amber-200 shadow-sm">
               🎙️
             </div>
             <div>
               <div class="flex items-center gap-2">
                 <h1 class="text-2xl sm:text-3xl font-extrabold text-[#041E39]">ElevenLabs</h1>
-                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800 marathi-text">Freemium</span>
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-900 marathi-text">Freemium (मोफत क्रेडिट्स)</span>
               </div>
               <p class="text-sm font-semibold text-slate-600 marathi-text mt-1">
-                खऱ्या माणसासारखा उच्चार आणि भावना असणारा सर्वात वास्तववादी AI आवाज
+                खऱ्या माणसासारखा उच्चार, श्वास आणि भावना असणारा अव्वल दर्जाचा AI Voiceover
               </p>
             </div>
           </div>
-          <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-[#041E39] text-white font-bold rounded-xl text-sm marathi-text">
+
+          <a href="https://elevenlabs.io" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 bg-[#041E39] hover:bg-[#082e54] text-white font-bold rounded-xl text-sm text-center transition-colors marathi-text">
             अधिकृत वेबसाईट उघडा ↗
           </a>
         </div>
 
+        <!-- Badges Bar -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 text-xs marathi-text">
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">विभाग (Category)</span>
             <span class="font-bold text-[#041E39]">Voice & Audio</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कठीणता (Difficulty)</span>
             <span class="font-bold text-emerald-700">★ Beginner Friendly</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी</span>
-            <span class="font-bold text-slate-800">YouTubers, पॉडकास्टर्स</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कोणासाठी (Audience)</span>
+            <span class="font-bold text-[#041E39]">YouTubers, पॉडकास्टर्स, शिक्षक</span>
           </div>
           <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
-            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी</span>
-            <span class="font-bold text-slate-800">ElevenLabs</span>
+            <span class="text-slate-400 block font-bold uppercase text-[10px]">कंपनी (Company)</span>
+            <span class="font-bold text-[#041E39]">ElevenLabs</span>
           </div>
         </div>
       </div>
 
-      <div class="space-y-8 marathi-text">
+      <!-- Detail Content Sections -->
+      <div class="space-y-10 marathi-text">
+
+        <!-- 1. हे Tool काय आहे? -->
         <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-3">
-          <h2 class="text-xl font-bold text-[#041E39]">ElevenLabs चे वैशिष्ट्य</h2>
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>📖</span>
+            <span>ElevenLabs म्हणजे काय आणि ते कसे काम करते?</span>
+          </h2>
           <p class="text-sm text-slate-700 leading-relaxed">
-            सामान्य कम्प्युटरच्या रोबोटिक आवाजापेक्षा वेगळा, मानवी श्वास, चढ-उतार आणि भावनांसह बोलणारा आवाज निर्माण करण्यासाठी ElevenLabs सर्वोत्तम आहे. तुम्ही मराठी मजकूर पेस्ट केल्यास हे स्पष्ट मराठी भाषेत ऑडिओ फाईल डाऊनलोड करू देते.
+            ElevenLabs हे जगातील सर्वात प्रगत आणि वास्तववादी Text-to-Speech आणि Voice AI व्यासपीठ आहे. पूर्वीच्या काळातील कम्प्युटरच्या रोबोटिक आणि कृत्रिम आवाजापेक्षा हे पूर्णपणे वेगळे आहे. यामध्ये मानवी श्वास, शब्दांमधील योग्य चढ-उतार, हावभाव आणि उत्साह अगदी नैसर्गिक वाटतो.
+          </p>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            तुम्ही कोणताही मराठी किंवा इंग्रजी मजकूर या टूलमध्ये टाकताच, ते काही सेकंदात स्टुडिओ दर्जाचा ऑडिओ तयार करते. तसेच तुम्ही तुमच्या स्वतःच्या आवाजाची नक्कल (Voice Cloning) देखील करू शकता.
           </p>
         </section>
+
+        <!-- 2. दैनंदिन वापरातील उदाहरणे -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>💡</span>
+            <span>दैनंदिन वापरातील ४ खरी उदाहरणे</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📹 Faceless YouTube चॅनेलसाठी आवाज</div>
+              <div class="text-xs text-slate-600">स्वतः न बोलता माहितीपूर्ण, इतिहास किंवा तंत्रज्ञान व्हिडिओंसाठी धीरगंभीर व स्पष्ट मराठी Voiceover तयार करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📖 ऑडिओ पुस्तके व गोष्टी</div>
+              <div class="text-xs text-slate-600">लहान मुलांच्या गोष्टी किंवा पुस्तकांचे भावपूर्ण आणि रंजक स्वरात ऑडिओ बुक तयार करणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">📢 दुकानांच्या जाहिराती व रेडिओ जिंगल्स</div>
+              <div class="text-xs text-slate-600">स्थानिक दुकानांच्या ऑफर्स आणि उद्घाटनासाठी व्यावसायिक रेडिओ अनाउंसरसारखा खणखणीत आवाज देणे.</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-sm text-[#041E39] mb-1">🌐 इंग्रजी व्हिडिओचे मराठीत डबिंग (AI Dubbing)</div>
+              <div class="text-xs text-slate-600">कोणत्याही इंग्रजी व्हिडिओचा मूळ आवाज बदलून तोच आशय अस्खलित मराठीत ऐकवणे.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Step-by-Step Tutorial -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>🛠️</span>
+            <span>ElevenLabs कसे वापरावे? (पायरी १ ते ४)</span>
+          </h2>
+          
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">१</span>
+              <div class="text-xs text-slate-700">
+                <strong>मोफत साइन अप करा:</strong> <code>elevenlabs.io</code> वर जा आणि Google खात्याद्वारे मोफत साइन अप करा. दरमहा मोफत १०,००० अक्षरे मिळतात.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">२</span>
+              <div class="text-xs text-slate-700">
+                <strong>Voice आणि मॉडेल निवडा:</strong> "Text to Speech" टॅबमध्ये जाऊन आवडीचा आवाज निवडा आणि "Eleven Multilingual v2" मॉडेल निवडा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">३</span>
+              <div class="text-xs text-slate-700">
+                <strong>मजकूर पेस्ट करा:</strong> खालील टेक्स्ट बॉक्समध्ये तुमची मराठी किंवा इंग्रजी स्क्रिप्ट टाईप अथवा पेस्ट करा.
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="w-7 h-7 rounded-lg bg-[#041E39] text-[#F7B500] font-bold text-xs flex items-center justify-center shrink-0">४</span>
+              <div class="text-xs text-slate-700">
+                <strong>Generate & Download:</strong> "Generate Speech" बटनावर क्लिक करा. अवघ्या ५ सेकंदात तयार झालेला ऑडिओ ऐका आणि MP3 फाईल डाऊनलोड करा.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Ready Marathi Prompts / Scripts -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center justify-between">
+            <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+              <span>📋</span>
+              <span>ElevenLabs साठी तयार मराठी स्क्रिप्ट्स</span>
+            </h2>
+            <a href="/prompts.html" class="text-xs font-bold text-[#041E39] hover:underline">सर्व Prompts →</a>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Prompt 1 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">YouTube व्हिडिओसाठी प्रेरणादायी स्क्रिप्ट</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "यश म्हणजे एका रात्रीत घडणारी गोष्ट नाही. त्यासाठी दररोज शांतपणे घेतलेले छोटे छोटे निर्णय आणि प्रामाणिक कष्ट लागतात. स्वतःवर विश्वास ठेवा, कारण तुमच्या क्षमतेची सीमा फक्त तुम्हीच ठरवू शकता."
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 स्क्रिप्ट कॉपी करा
+              </button>
+            </div>
+
+            <!-- Prompt 2 -->
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="font-bold text-xs text-slate-500 uppercase mb-1">स्थानिक दुकानाच्या जाहिरातीसाठी स्क्रिप्ट</div>
+              <p class="prompt-text text-xs text-slate-800 bg-white p-3 rounded-xl border border-slate-200 font-mono mb-2">
+                "नमस्कार पुणेकर! आता आपल्या लाडक्या शहरात सुरू होत आहे सर्वात मोठे इलेक्ट्रॉनिक मॉल. सणासुदीच्या निमित्ताने सर्व खरेदीवर थेट चाळीस टक्के सूट. आजच भेट द्या आणि ऑफरचा लाभ घ्या!"
+              </p>
+              <button onclick="copyPrompt(this)" class="px-3 py-1.5 bg-[#041E39] hover:bg-[#082e54] text-white rounded-lg text-xs font-bold transition-all">
+                📋 स्क्रिप्ट कॉपी करा
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Pros & Cons -->
+        <section class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-xl font-bold text-[#041E39] flex items-center gap-2">
+            <span>⚖️</span>
+            <span>फायदे आणि मर्यादा (Pros & Cons)</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">
+              <div class="font-bold text-xs text-emerald-900 mb-2">✅ फायदे (Pros)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>अतिशय वास्तववादी आणि मानवी भावभावनांनी भरलेला आवाज.</li>
+                <li>मराठीसह ३० हून अधिक भाषांना उत्कृष्ट सपोर्ट.</li>
+                <li>मोफत प्लॅनमध्ये महिन्याला १०,००० अक्षरे मोफत मिळतात.</li>
+                <li>व्हिडिओंचे ऑटोमॅटिक AI Dubbing करण्याची उत्तम सोय.</li>
+              </ul>
+            </div>
+            <div class="p-4 rounded-2xl bg-rose-50/60 border border-rose-200">
+              <div class="font-bold text-xs text-rose-900 mb-2">⚠️ मर्यादा (Cons)</div>
+              <ul class="text-xs text-slate-700 space-y-1.5 list-disc list-inside">
+                <li>मोफत मर्यादेनंतर पेड सबस्क्रिप्शन विकत घ्यावे लागते.</li>
+                <li>काही कठीण जोडशब्दांच्या उच्चारांसाठी फॉनेटिक स्पेलिंग द्यावे लागते.</li>
+                <li>व्यावसायिक कमर्शियल हक्कांसाठी सशुल्क प्लॅन आवश्यक असतो.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Next Steps -->
+        <div class="bg-slate-100 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="font-bold text-sm text-[#041E39]">पुढील शिफारस केलेले टूल:</div>
+            <div class="text-xs text-slate-600">केवळ मराठी शब्दांवरून सुरेल गाणी आणि संगीत तयार करायचे आहे का?</div>
+          </div>
+          <a href="/tools/suno.html" class="px-4 py-2 bg-[#041E39] text-white rounded-xl text-xs font-bold hover:bg-[#082e54] whitespace-nowrap">
+            Suno AI शिका →
+          </a>
+        </div>
+
       </div>
 
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="bg-[#041E39] text-white border-t border-slate-800 pt-12 pb-10 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-400 marathi-text text-center">
-      © 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 marathi-text">
+      <p>© 2026 AI Tools Marathi. AI सोप्या मराठीत शिकूया.</p>
+      <div class="flex gap-4">
+        <a href="/index.html" class="hover:underline">मुख्यपृष्ठ</a>
+        <a href="/tools.html" class="hover:underline">AI Tools</a>
+        <a href="/prompts.html" class="hover:underline">Prompts</a>
+        <a href="/learn.html" class="hover:underline">Beginner Guide</a>
+      </div>
     </div>
   </footer>
+
   <script src="/js/main.js"></script>
 </body>
 </html>
